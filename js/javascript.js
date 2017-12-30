@@ -138,3 +138,7 @@ function trimite() {
 		document.getElementById("#infoText").innerHTML = "Datele au fost introduse corect!";
 	}
 }
+
+  $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
