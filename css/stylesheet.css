@@ -124,3 +124,19 @@ body {
 .login-help{
   font-size: 12px;
 }
+
+.cautare{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.center-div
+{
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  right: 0;
+  left: 0;
+  width: 100px;
+}
