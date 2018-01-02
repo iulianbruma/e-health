@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Introducere rețetă</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="medic.html"><img style="height: 40px;" src="images/logo.png" /></a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link" href="inregistrare.html">Inregistrare pacient</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="introducere_reteta.html">Introducere reteta</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Rectificare tratament</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Vizualizare date monitorizate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Raspunde intrebari</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Adaugare conferinta</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<br>
+
+<div class="container">
+    <h1 class="well text-center mb-5">Introducere rețetă</h1>
+    <h6>Alegeți pacientul:</h6>
+    <div>
+        <form class="d-inline-flex searchPacient">
+            Caută<br><input class="searchPacientInput ml-2 mr-4" type="text" name="search" value=""><br>
+            <input class="btn" type="submit" value="Search">
+        </form>
+    </div><br>
+    <table class="table table-bordered text-center pacientiTable">
+        <thead>
+        <tr>
+            <th>Nr. crt.</th>
+            <th>Nume</th>
+            <th>Prenume</th>
+            <th>Email</th>
+            <th>Data nașterii</th>
+            <th>Adresa</th>
+            <th>Alege</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<br>
+<br>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Cei 4 fantastici 2017</p>
+    </div>
+</footer>
+
+<script src="js/jquery/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/loadPacienti.js"></script>
+</body>
