@@ -5019,7 +5019,7 @@ button.close {
   left: 0;
   z-index: 1050;
   display: none;
-  overflow: hidden;
+  overflow: auto;
   outline: 0;
 }
 
