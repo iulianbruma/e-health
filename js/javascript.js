@@ -11,9 +11,38 @@ $( "#loginId" ).click(function() {
 	}
  });
  
- $( "#logout" ).click(function() {
+$( "#logout" ).click(function() {
 	window.location.href = "index.html";
+});
+
+//plasare_intrebare
+/* ************************************************************************************************ */
+
+$( "#butonPlasareIntrebare" ).click(function() {
+	var intrebare = document.getElementById("intrebarePlasata").value;
+    var specialitate = document.getElementById("specIntrebarePlasata").value;
+    
+	if (intrebare == "" && specialitate == "") {
+		document.getElementById("intrebarePlasataError").style.display = "inline";
+		$("#intrebarePlasataError").html("Câmpul dat nu poate fi gol! Plasează o întrebare");
+        document.getElementById("specialitateIntrebError").style.display = "inline";
+		$('#specialitateIntrebError').html('Trebuie să alegi o specialitate!');
+	} else if (specialitate == "") {
+        document.getElementById("intrebarePlasataError").style.display = "none";
+        document.getElementById("specialitateIntrebError").style.display = "inline";
+		$('#specialitateIntrebError').html('Trebuie să alegi o specialitate!');
+	} else if (intrebare == "") {
+        document.getElementById("specialitateIntrebError").style.display = "none";
+        document.getElementById("intrebarePlasataError").style.display = "inline";
+		$("#intrebarePlasataError").html("Câmpul dat nu poate fi gol! Plasează o întrebare");
+    } else {
+        document.getElementById("intrebarePlasataError").style.display = "none";
+        document.getElementById("specialitateIntrebError").style.display = "none";
+        $('#butonPlasIntrebConfirm').click();
+    }
  });
+
+/* ************************************************************************************************ */
  
 $(function () {
     $('#datetimepicker1').datetimepicker();
