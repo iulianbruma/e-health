@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Adăugare feedback</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="pacient.html"><img style="height: 40px;" src="images/logo.png" /></a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link" href="vizTrat.html">Vizualizare tratament</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Vizualizare intrebari</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Adaugare intrebare</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="adaugare_feedback.html">Adaugare feedback</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Vizualizare conferinte</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">"Emergency Call"</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" id="logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<br>
+
+<div class="container">
+    <h1 class="well text-center mb-5">Adăugare feedback</h1>
+    <h5>Nume medic: Pop Ion.</h5>
+    <br>
+    <div class="col-lg-12 well">
+        <div class="row mb-5">
+            <div class="col">
+                Procedura: <input type="text" class="w-75" placeholder="Introduceți numele procedurii.">
+            </div>
+            <div class="col">
+                <!-- Star Rating -->
+                <div class="container">
+                    <div class="row">
+                        Evaluare generala:
+                        <div class="star-rating text-warning  ml-2 mr-4">
+                            <span class="fa fa-star-o" data-rating="1"></span>
+                            <span class="fa fa-star-o" data-rating="2"></span>
+                            <span class="fa fa-star-o" data-rating="3"></span>
+                            <span class="fa fa-star-o" data-rating="4"></span>
+                            <span class="fa fa-star-o" data-rating="5"></span>
+                            <input type="hidden" class="rating-value" value="5.0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col">
+                Cum apreciați operația efectuată?
+                <form action="" class="pl-5">
+                    <input type="radio" name="feedback" value="fb"> Foarte bine<br>
+                    <input type="radio" name="feedback" value="b"> Bine<br>
+                    <input type="radio" name="feedback" value="m"> Mediu<br>
+                    <input type="radio" name="feedback" value="db"> Deloc bine<br>
+                </form>
+            </div>
+            <div class="col">
+                Recenziile mele:<br>
+                <textarea rows="4" cols="50"></textarea>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col">
+                <input type="checkbox" name="acord" value="acord" onchange="activateButton(this)"> Sunt de acord cu condițiile de furnizare și cu politica de procesare a datelor personale.<br>
+            </div>
+        </div>
+    </div>
+    <button type="button" onclick="window.location.href='adaugare_feedback.html'" class="btn btn-lg">Înapoi</button>
+    <button type="button" disabled id="adaugareFeedbackButton" class="btn btn-lg btn-success float-right" data-toggle="modal" data-target="#adaugareFeedbackModal">Adaugă recenzie</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="adaugareFeedbackModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Adăugare feedback</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p class="font-weight-bold">Feedback-ul a fost salvat cu succes.</p>
+                    <p>Vă multumim pentru recenzia acordată!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="window.location.href='pacient.html'" class="btn btn-default" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Cei 4 fantastici 2017</p>
+    </div>
+</footer>
+
+<script src="js/jquery/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/adaugareFeedback.js"></script>
+</body>
