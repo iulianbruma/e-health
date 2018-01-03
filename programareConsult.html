@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Programare Consultatie</title>
+
+	
+	
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/stylesheet.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+  </head>
+<body>
+
+  <!-- Navigation -->	
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary fixed-top">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="index.html"><img style="height: 40px;" src="images/logo.png" /></a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="nav-item">
+              <a class="nav-link" href="index.html">Acasa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">Despre noi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="programareConsult.html">Programare consultatie</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" data-toggle="modal" href="#myModal">Login</a>
+            </li>
+		</ul>
+	  </div>
+	</nav>
+	
+	
+	<div class="container mb-5">
+        <h1 class="well text-center mb-5 mt-3">Programare consultație</h1>
+		
+		<div class="row mb-5 ml-5">
+            <div class="col-sm-4">
+                <label >Specialitate</label>
+                <select class="form-control" name="size">
+                    <option value="c">Cardiologie</option>
+                    <option value="s">Stomatologie</option>
+                    <option value="o">Oncologie </option>
+					<option value="p">Pediatrie </option>
+                </select>   
+            </div>
+            <div class="col-sm-4">
+                <label >Oraș</label>
+                <select class="form-control" name="size">
+                    <option value="">Cluj-Napoca</option>
+                    <option value="s">Oradea</option>
+                    <option value="m">Zalău</option>
+                </select>   
+			</div>
+			<div class="col-sm-4">
+                 <button type="button"  class="btn btn-lg btn-success ml-5 mt-4 ">Caută</button>	
+			</div>
+        </div>
+		
+		
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Nume doctor</th>
+					<th>Specialitate</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Dr. Mihali Paul</td>
+					<td>Oncologie</td>
+					<td> <button type="button" onclick="window.location.href='programareConsult2.html'" class="btn btn-lg btn-success float-right">Alege</button>	</td>
+				</tr>
+				<tr>
+					<td>Dr. Ursu Horea</td>
+					<td>Stomatologie</td>
+					<td> <button type="button" onclick="window.location.href='programareConsult2.html'" class="btn btn-lg btn-success float-right">Alege</button>	</td>
+				</tr>
+				<tr>
+					<td>Dr. Jalba Pavel</td>
+					<td>Pediatrie</td>
+					<td> <button type="button" onclick="window.location.href='programareConsult2.html'" class="btn btn-lg btn-success float-right ">Alege</button>	</td>
+				</tr>
+			</tbody>
+		</table>
+	
+	</div>
+	
+	 <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Cei 4 fantastici 2017</p>
+      </div>
+    </footer>
+
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/javascript.js"></script>
+	</body>
