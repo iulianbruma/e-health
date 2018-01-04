@@ -143,29 +143,3 @@ function trimite() {
 		document.getElementById("#infoText").innerHTML = "Datele au fost introduse corect!";
 	}
 }
-
-btnSalveaza.onclick = function() {
-    alert('Conferința a fost salvată cu succes');
-}
-
-// When the user clicks on the button, open the modal 
-btnDistribuie.onclick = function() {
-    shareModal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanClose.onclick = function() {
-    shareModal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == shareModal) {
-        shareModal.style.display = "none";
-    }
-}
-
-btnDistribuie1.onclick = function() {
-    alert('Conferința a fost distribuită cu succes!');
-    shareModal.style.display = "none";
-}
