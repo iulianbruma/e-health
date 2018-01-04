@@ -1,3 +1,11 @@
+
+//Modal - distribuie conferinta adaugata
+var shareModal = document.getElementById('shareModal');
+var btnDistribuie = document.getElementById("distribuie");
+var btnSalveaza = document.getElementById("salveaza");
+var btnDistribuie1 = document.getElementById("distribuie1");
+var spanClose = document.getElementsByClassName("close")[0];
+
 $( "#loginId" ).click(function() {
 	var username = document.getElementById("username").value;
 	var pass = document.getElementById("password").value;
