@@ -6,7 +6,8 @@
       "prenume": "Ion",
       "email": "aanei.ion@gmail.com",
       "dataNasterii": "14.10.1987",
-      "adresa": "Str. Observatorului 8/14, Cluj-Napoca"
+      "adresa": "Str. Observatorului 8/14, Cluj-Napoca",
+	  "CNP": "2871014314025"
     },
     {
       "nrCrt": "2",
@@ -14,7 +15,8 @@
       "prenume": "Maria",
       "email": "acasandri.maria@gmail.com",
       "dataNasterii": "31.01.1990",
-      "adresa": "Str. Lunii 12/4, Cluj-Napoca"
+      "adresa": "Str. Lunii 12/4, Cluj-Napoca",
+	  "CNP": "2900131314025"
     },
     {
       "nrCrt": "3",
@@ -22,7 +24,8 @@
       "prenume": "Gheorghe",
       "email": "adami.gheorghe@gmail.com",
       "dataNasterii": "23.02.1968",
-      "adresa": "Str. Dorobantilor 3/4, Cluj-Napoca"
+      "adresa": "Str. Dorobantilor 3/4, Cluj-Napoca",
+	  "CNP": "2680223314025"
     },
     {
       "nrCrt": "4",
@@ -38,7 +41,8 @@
       "prenume": "Ion",
       "email": "pop.ion@gmail.com",
       "dataNasterii": "14.10.1987",
-      "adresa": "Str. Observatorului 8/14, Cluj-Napoca"
+      "adresa": "Str. Observatorului 8/14, Cluj-Napoca",
+	  "CNP": "1900131314025"
     },
     {
       "nrCrt": "6",
@@ -46,7 +50,8 @@
       "prenume": "Maria",
       "email": "pop.maria@gmail.com",
       "dataNasterii": "31.01.1990",
-      "adresa": "Str. Lunii 12/4, Cluj-Napoca"
+      "adresa": "Str. Lunii 12/4, Cluj-Napoca",
+	  "CNP": "2900131314025"
     },
     {
       "nrCrt": "7",
@@ -54,7 +59,8 @@
       "prenume": "Gheorghe",
       "email": "gheorghe@gmail.com",
       "dataNasterii": "23.02.1968",
-      "adresa": "Str. Dorobantilor 3/4, Cluj-Napoca"
+      "adresa": "Str. Dorobantilor 3/4, Cluj-Napoca",
+	  "CNP": "1680223314025"
     },
     {
       "nrCrt": "8",
@@ -62,7 +68,8 @@
       "prenume": "Popescu",
       "email": "bot01@gmail.com",
       "dataNasterii": "03.12.1973",
-      "adresa": "Str. Baritiu 42/3, Cluj-Napoca"
+      "adresa": "Str. Baritiu 42/3, Cluj-Napoca",
+	  "CNP": "1900131314025"
     }
   ]
 }
