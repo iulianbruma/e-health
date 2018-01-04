@@ -1,0 +1,25 @@
+{
+  "medicamente": [
+
+    {
+      "medicament": "ACC",
+	  "modAdministrare": "Se administrează după mese",
+	  "observații": "A nu se consuma împreună cu antitusive!"
+    },
+    {
+      "medicament": "Paracetamol",
+	  "modAdministrare": "Se administrează 1-2 comprimate la fiecare 4 ore.",
+	  "observații": "Nu se recomandă utilizarea concomitentă de alte medicamente care conțin paracetamol!"
+    },
+    {
+      "medicament": "Faringosept",
+	  "modAdministrare": "Se administrează imediat după mese (10-15 min).",
+	  "observații": "Se recomandă ca timp de 3 ore sa nu se consume lichide!"
+    },
+     {
+      "medicament": "Theraflu Sinus",
+      "modAdministrare": "Se dizolvă un plic in 200 ml apă fierbinte, de două ori pe zi.",
+      "observații": "Consumul bauturilor alcoolice este interzis!"
+    }
+  ]
+}
