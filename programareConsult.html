@@ -52,55 +52,59 @@
 		<div class="row mb-5 ml-5">
             <div class="col-sm-4">
                 <label >Specialitate</label>
-                <select class="form-control" name="size">
-                    <option value="c">Cardiologie</option>
-                    <option value="s">Stomatologie</option>
-                    <option value="o">Oncologie </option>
-					<option value="p">Pediatrie </option>
+                <select class="form-control specialitateM" name="size">
+                    <option value="Ginecologie">Ginecologie</option>
+                    <option value="Medicină nucleară">Medicină nucleară</option>
+                    <option value="Anestezie">Anestezie </option>
+					<option value="Hematologie">Hematologie </option>
+					<option value="Chimioterapie">Chimioterapie </option>
+					<option value="Oncologie">Oncologie </option>
+					<option value="Radioterapie">Radioterapie </option>
                 </select>   
             </div>
             <div class="col-sm-4">
                 <label >Oraș</label>
-                <select class="form-control" name="size">
-                    <option value="">Cluj-Napoca</option>
-                    <option value="s">Oradea</option>
-                    <option value="m">Zalău</option>
+                <select class="form-control orasM" name="size">
+                    <option value="Cluj-Napoca">Cluj-Napoca</option>
+                    <option value="Oradea">Oradea</option>
+                    <option value="Sibiu">Sibiu</option>
                 </select>   
 			</div>
 			<div class="col-sm-4">
-                 <button type="button"  class="btn btn-lg btn-success ml-5 mt-4 ">Caută</button>	
+                 <button type="button"  class="btn btn-lg btn-success ml-5 mt-4 cautaMedici">Caută</button>	
 			</div>
         </div>
 		
 		
-		<table class="table table-striped">
+		<table class="table table-bordered text-center tabelMedici">
 			<thead>
 				<tr>
 					<th>Nume doctor</th>
 					<th>Specialitate</th>
-					<th></th>
+					<th>Oraș</th>
+					<th>Opțiuni</th>
+				
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>Dr. Mihali Paul</td>
-					<td>Oncologie</td>
-					<td> <button type="button" onclick="window.location.href='programareConsult2.html'" class="btn btn-lg btn-success float-right">Alege</button>	</td>
-				</tr>
-				<tr>
-					<td>Dr. Ursu Horea</td>
-					<td>Stomatologie</td>
-					<td> <button type="button" onclick="window.location.href='programareConsult2.html'" class="btn btn-lg btn-success float-right">Alege</button>	</td>
-				</tr>
-				<tr>
-					<td>Dr. Jalba Pavel</td>
-					<td>Pediatrie</td>
-					<td> <button type="button" onclick="window.location.href='programareConsult2.html'" class="btn btn-lg btn-success float-right ">Alege</button>	</td>
-				</tr>
+				
 			</tbody>
 		</table>
 	
 	</div>
+	
+	
+		<div class="modal hide" id="myModal">
+		<div>
+			<div class="loginmodal-container" style="margin-top: 10%;">
+				<button type="button" class="close" data-dismiss="modal">x</button>
+				<h1>Logare in sistem</h1><br>
+				<input type="text" id="username" name="user" placeholder="Nume utilizator">
+				<input type="password" id="password" name="pass" placeholder="Parola">
+				<input type="submit" name="login" id="loginId" class="login loginmodal-submit" value="Logare">
+				
+			</div>
+		</div>
 	
 	 <!-- Footer -->
     <footer class="py-5 bg-dark">
@@ -111,5 +115,5 @@
 
     <script src="js/jquery/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/javascript.js"></script>
+    <script src="js/loadMediciPentruProgramare.js"></script>
 	</body>

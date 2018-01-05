@@ -4,6 +4,8 @@
       "nrCrt": "1",
       "nume": "Achimaș Cadariu Patriciu",
       "ocupatie": "Medic primar ginecolog",
+	  "specialitate": "Ginecologie",
+	  "oras": "Cluj-Napoca",
       "nota": "4.9",
       "stele": "★★★★☆"
     },
@@ -11,6 +13,8 @@
       "nrCrt": "2",
       "nume": "Bărbuș Elena",
       "ocupatie": "Medic specialist - Medicină nucleară",
+	  "specialitate": "Medicină nucleară",
+	   "oras": "Cluj-Napoca",
       "nota": "3.9",
       "stele": "★★★☆☆"
     },
@@ -18,6 +22,8 @@
       "nrCrt": "3",
       "nume": "Blag Dorel",
       "ocupatie": "Medic primar anestezie - terapie intensivă",
+	  "specialitate": "Anestezie",
+	  "oras": "Oradea",
       "nota": "5,0",
       "stele": "★★★★★"
     },
@@ -25,6 +31,8 @@
       "nrCrt": "4",
       "nume": "Bojan Anca",
       "ocupatie": "Medic primar medicină internă, Hermatologie",
+	  "specialitate": "Hematologie",
+	  "oras": "Oradea",
       "nota": "3,5",
       "stele": "★★★☆☆"
     },
@@ -32,6 +40,8 @@
       "nrCrt": "5",
       "nume": "Burz Claudia",
       "ocupatie": "Medic primar oncologie medicală - chimioterapie",
+	  "specialitate": "Chimioterapie",
+	  "oras": "Sibiu",
       "nota": "4.8",
       "stele": "★★★★☆"
     },
@@ -39,6 +49,8 @@
       "nrCrt": "6",
       "nume": "Căinap Călin Ion",
       "ocupatie": "Medic primar oncologie medicală - chimioterapie, oncologie digestivă",
+	  "specialitate": "Oncologie",
+	  "oras": "Cluj-Napoca",
       "nota": "4.9",
       "stele": "★★★★☆"
     },
@@ -46,6 +58,8 @@
       "nrCrt": "7",
       "nume": "Cebotariu Cristina",
       "ocupatie": "Medic primar oncologie generală și chimioterapie",
+	  "specialitate": "Oncologie",
+	  "oras": "Oradea",
       "nota": "2.2",
       "stele": "★★☆☆☆"
     },
@@ -53,6 +67,8 @@
       "nrCrt": "8",
       "nume": "Cernea Dana",
       "ocupatie": "Medic primar radioterapie. Medic specialist oncologie generală și chimioterapie",
+	  "specialitate": "Chimioterapie",
+	  "oras": "Sibiu",
       "nota": "5.0",
       "stele": "★★★★★"
     },
@@ -60,6 +76,8 @@
       "nrCrt": "9",
       "nume": "Cernea Valentin",
       "ocupatie": "Medic primar oncologie radioterapie",
+	  "specialitate": "Radioterapie",
+	  "oras": "Sibiu",
       "nota": "3.4",
       "stele": "★★★☆☆"
     }
