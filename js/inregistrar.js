@@ -1,4 +1,13 @@
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
 
+		var letters=/^[a-zA-Z]*$/;
+		var pattern = /^([0-9]{10})$/;
+		var patternCNP = /^([0-9]{13})$/;
+		var interzis=/[@#$%^&*]/;
+		
 $('#inregistrare').click(function() {
 	var nume = document.getElementById("numeInput").value;
 	var prenume = document.getElementById("prenumeInput").value;
@@ -55,25 +64,241 @@ else if (nume == "" || prenume == "" || email == ""  || adresa == "" || CNP == "
 	document.getElementById("telefonpError").style.display = "none";
 
 }
-	else $('#inregistrareFinal').click();
-});
 
 
-
-$('#inregistrareFinal').click(function() {
-      
-
- 	var CNP = document.getElementById("cnpInput").value;
 	
+	
+else{
 
-        $.getJSON('data/pacienti.json', function(data) {
-            $.each(data.pacienti, function(i, f) {
+			
+	  $.getJSON('data/pacienti.json', function(data) {
+			$.each(data.pacienti, function(i, f) {
                 if(f.CNP.includes(CNP)){
-					$('#inregistrareError').click();
+						document.getElementById("allError").style.display = "none";
+						document.getElementById("numeError").style.display = "none";
+						document.getElementById("prenumeError").style.display = "none";
+						document.getElementById("emailError").style.display = "none";
+						document.getElementById("adresaError").style.display = "none";
+						document.getElementById("CNPError").style.display = "inline";
+						document.getElementById("telefonError").style.display = "none";
+						document.getElementById("dnError").style.display = "none";
+						document.getElementById("grupaError").style.display = "none";
+						document.getElementById("numepError").style.display = "none";
+						document.getElementById("prenumepError").style.display = "none";
+						document.getElementById("telefonpError").style.display = "none";
+						
+						$('#CNPError').html('Pacient deja înregistrat!');
+						//$('#inregistrareError').click();
+						return false;
+					
 				}
+	
+			});
+	   
+	   });
+				
+					 
+				 if  (!letters.test(nume) || nume.length<3 )
+					{
+							
+						
+						document.getElementById("allError").style.display = "none";
+						document.getElementById("numeError").style.display = "inline";
+						document.getElementById("prenumeError").style.display = "none";
+						document.getElementById("emailError").style.display = "none";
+						document.getElementById("adresaError").style.display = "none";
+						document.getElementById("CNPError").style.display = "none";
+						document.getElementById("telefonError").style.display = "none";
+						document.getElementById("dnError").style.display = "none";
+						document.getElementById("grupaError").style.display = "none";
+						document.getElementById("numepError").style.display = "none";
+						document.getElementById("prenumepError").style.display = "none";
+						document.getElementById("telefonpError").style.display = "none";
+						
+						$('#numeError').html('Numele trebuie sa conțină cel puțin trei litere!');
+						
+					}
+
+				else if  (!letters.test(prenume) || prenume.length<3 )
+					{
+						
+						document.getElementById("allError").style.display = "none";
+						document.getElementById("numeError").style.display = "none";
+						document.getElementById("prenumeError").style.display = "inline";
+						document.getElementById("emailError").style.display = "none";
+						document.getElementById("adresaError").style.display = "none";
+						document.getElementById("CNPError").style.display = "none";
+						document.getElementById("telefonError").style.display = "none";
+						document.getElementById("dnError").style.display = "none";
+						document.getElementById("grupaError").style.display = "none";
+						document.getElementById("numepError").style.display = "none";
+						document.getElementById("prenumepError").style.display = "none";
+						document.getElementById("telefonpError").style.display = "none";
+						$('#prenumeError').html('Prenumele trebuie sa conțină cel puțin trei litere!');
+						
+					}
+					
+					else if(!validateEmail(email))
+					{
+						
+						document.getElementById("allError").style.display = "none";
+						document.getElementById("numeError").style.display = "none";
+						document.getElementById("prenumeError").style.display = "none";
+						document.getElementById("emailError").style.display = "inline";
+						document.getElementById("adresaError").style.display = "none";
+						document.getElementById("CNPError").style.display = "none";
+						document.getElementById("telefonError").style.display = "none";
+						document.getElementById("dnError").style.display = "none";
+						document.getElementById("grupaError").style.display = "none";
+						document.getElementById("numepError").style.display = "none";
+						document.getElementById("prenumepError").style.display = "none";
+						document.getElementById("telefonpError").style.display = "none";
+						$('#emailError').html('Emailul trebuie sa aibă structura corectă!');
+					}
+					
+					
+					else if  (interzis.test(adresa) )
+					{
+						
+						
+						document.getElementById("allError").style.display = "none";
+						document.getElementById("numeError").style.display = "none";
+						document.getElementById("prenumeError").style.display = "none";
+						document.getElementById("emailError").style.display = "none";
+						document.getElementById("adresaError").style.display = "inline";
+						document.getElementById("CNPError").style.display = "none";
+						document.getElementById("telefonError").style.display = "none";
+						document.getElementById("dnError").style.display = "none";
+						document.getElementById("grupaError").style.display = "none";
+						document.getElementById("numepError").style.display = "none";
+						document.getElementById("prenumepError").style.display = "none";
+						document.getElementById("telefonpError").style.display = "none";
+						$('#adresaError').html('Caractere interzise pentru adresă!');
+						
+					}
+					
+					
+						else if  (!patternCNP.test(CNP) )
+					{
+						
+						document.getElementById("allError").style.display = "none";
+						document.getElementById("numeError").style.display = "none";
+						document.getElementById("prenumeError").style.display = "none";
+						document.getElementById("emailError").style.display = "none";
+						document.getElementById("adresaError").style.display = "none";
+						document.getElementById("CNPError").style.display = "inline";
+						document.getElementById("telefonError").style.display = "none";
+						document.getElementById("dnError").style.display = "none";
+						document.getElementById("grupaError").style.display = "none";
+						document.getElementById("numepError").style.display = "none";
+						document.getElementById("prenumepError").style.display = "none";
+						document.getElementById("telefonpError").style.display = "none";
+						$('#CNPError').html('CNP trebuie aibă structura corectă!');
+						
+					}
+					
+				else if  (!pattern.test(telefon) )
+					{
+					
+						document.getElementById("allError").style.display = "none";
+						document.getElementById("numeError").style.display = "none";
+						document.getElementById("prenumeError").style.display = "none";
+						document.getElementById("emailError").style.display = "none";
+						document.getElementById("adresaError").style.display = "none";
+						document.getElementById("CNPError").style.display = "none";
+						document.getElementById("telefonError").style.display = "inline";
+						document.getElementById("dnError").style.display = "none";
+						document.getElementById("grupaError").style.display = "none";
+						document.getElementById("numepError").style.display = "none";
+						document.getElementById("prenumepError").style.display = "none";
+						document.getElementById("telefonpError").style.display = "none";
+						$('#telefonError').html('Numărul de telefon trebuie aibă structura corectă!');
+						
+					}
+					
+					
+					
+				else if  (!letters.test(numep) || numep.length<3 )
+					{
+							
+					
+						document.getElementById("allError").style.display = "none";
+						document.getElementById("numeError").style.display = "none";
+						document.getElementById("prenumeError").style.display = "none";
+						document.getElementById("emailError").style.display = "none";
+						document.getElementById("adresaError").style.display = "none";
+						document.getElementById("CNPError").style.display = "none";
+						document.getElementById("telefonError").style.display = "none";
+						document.getElementById("dnError").style.display = "none";
+						document.getElementById("grupaError").style.display = "none";
+						document.getElementById("numepError").style.display = "inline";
+						document.getElementById("prenumepError").style.display = "none";
+						document.getElementById("telefonpError").style.display = "none";
+						
+						$('#numepError').html('Numele trebuie sa conțină cel puțin trei litere!');
+						
+					}
+
+				else if  (!letters.test(prenumep) || prenumep.length<3 )
+					{
+						
+						document.getElementById("allError").style.display = "none";
+						document.getElementById("numeError").style.display = "none";
+						document.getElementById("prenumeError").style.display = "none";
+						document.getElementById("emailError").style.display = "none";
+						document.getElementById("adresaError").style.display = "none";
+						document.getElementById("CNPError").style.display = "none";
+						document.getElementById("telefonError").style.display = "none";
+						document.getElementById("dnError").style.display = "none";
+						document.getElementById("grupaError").style.display = "none";
+						document.getElementById("numepError").style.display = "none";
+						document.getElementById("prenumepError").style.display = "inline";
+						document.getElementById("telefonpError").style.display = "none";
+						$('#prenumepError').html('Prenumele trebuie sa conțină cel puțin trei litere!');
+						
+					}
+					
+				else if  (!pattern.test(telefonp) )
+					{
+						
+						document.getElementById("allError").style.display = "none";
+						document.getElementById("numeError").style.display = "none";
+						document.getElementById("prenumeError").style.display = "none";
+						document.getElementById("emailError").style.display = "none";
+						document.getElementById("adresaError").style.display = "none";
+						document.getElementById("CNPError").style.display = "none";
+						document.getElementById("telefonError").style.display = "none";
+						document.getElementById("dnError").style.display = "none";
+						document.getElementById("grupaError").style.display = "none";
+						document.getElementById("numepError").style.display = "none";
+						document.getElementById("prenumepError").style.display = "none";
+						document.getElementById("telefonpError").style.display = "inline";
+						$('#telefonpError').html('Numărul de telefon trebuie aibă structura corectă!');
+						
+					}
+					
+				
+					
+					
 				else {
-					$('#inregistrareSucc').click();
+						
+						document.getElementById("allError").style.display = "none";
+						document.getElementById("numeError").style.display = "none";
+						document.getElementById("prenumeError").style.display = "none";
+						document.getElementById("emailError").style.display = "none";
+						document.getElementById("adresaError").style.display = "none";
+						document.getElementById("CNPError").style.display = "none";
+						document.getElementById("telefonError").style.display = "none";
+						document.getElementById("dnError").style.display = "none";
+						document.getElementById("grupaError").style.display = "none";
+						document.getElementById("numepError").style.display = "none";
+						document.getElementById("prenumepError").style.display = "none";
+						document.getElementById("telefonpError").style.display = "none";
+						 $('#inregistrareSucc').click();
 				}
-	   });
-	   });
+	
+}
+
 });
+
+

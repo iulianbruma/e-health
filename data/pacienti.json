@@ -33,7 +33,8 @@
       "prenume": "Ana",
       "email": "ana01@gmail.com",
       "dataNasterii": "03.12.1973",
-      "adresa": "Str. Baritiu 42/3, Cluj-Napoca"
+      "adresa": "Str. Baritiu 42/3, Cluj-Napoca",
+	  "CNP": "2680223314025"
     },
     {
       "nrCrt": "5",

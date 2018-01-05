@@ -12,6 +12,7 @@ $('#salveazaProgramareFirst').click(function() {
 		var letters=/^[a-zA-Z]*$/;
 		var pattern = /^([0-9]{10})$/;
 		
+		
 	if (nume == "" && prenume == ""&& email == ""  && telefon == ""  && calendar == "" ) {
 
 		document.getElementById("numeError").style.display = "block";
