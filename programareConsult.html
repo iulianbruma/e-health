@@ -19,32 +19,36 @@
   </head>
 <body>
 
-  <!-- Navigation -->	
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary fixed-top">
-	  <div class="container-fluid">
-		<div class="navbar-header">
-		  <a class="navbar-brand" href="index.html"><img style="height: 40px;" src="images/logo.png" /></a>
-		</div>
-		<ul class="nav navbar-nav navbar-right">
-			<li class="nav-item">
-              <a class="nav-link" href="index.html">Acasa</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="aboutus.html">Despre noi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link" href="programareConsult.html">Programare consultatie</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link" data-toggle="modal" href="#myModal">Login</a>
-            </li>
-		</ul>
-	  </div>
+    <!-- Navigation -->	
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img style="height: 40px;" src="images/logo.png" /></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHealthToogle" aria-controls="navbarHealthToogle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarHealthToogle">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Acasa</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="aboutus.html">Despre noi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="programareConsult.html">Programare consultatie</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="modal" href="#myModal">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 	</nav>
-	
 	
 	<div class="container mb-5">
         <h1 class="well text-center mb-5 mt-3">Programare consultație</h1>
@@ -99,7 +103,19 @@
 				</tr>
 			</tbody>
 		</table>
-	
+	   
+        <!--Modal-->
+        <div class="modal hide" id="myModal">
+            <div>
+                <div class="loginmodal-container" style="margin-top: 10%;">
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                    <h1>Logare in sistem</h1><br>
+                    <input type="text" id="username" name="user" placeholder="Nume utilizator">
+                    <input type="password" id="password" name="pass" placeholder="Parola">
+                    <input type="submit" name="login" id="loginId" class="login loginmodal-submit" value="Logare">
+                </div>
+            </div>
+        </div>
 	</div>
 	
 	 <!-- Footer -->
