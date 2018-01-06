@@ -6,6 +6,48 @@ var btnSalveaza = document.getElementById("salveaza");
 var btnDistribuie1 = document.getElementById("distribuie1");
 var spanClose = document.getElementsByClassName("close")[0];
 
+var pacienti;
+var medici;
+var specialitati;
+
+$.getJSON('data/medici.json', function(data) {
+    medici = data;
+});
+
+$(function() {
+    var localS = localStorage.getItem("intrebariList");
+    console.log(localS);
+    if (localS == null) {
+        $.getJSON('data/intrebariPacienti.json', function(data) {
+            localStorage.setItem("intrebariList", JSON.stringify(data));
+        });
+    }
+});
+
+$.getJSON('data/pacienti.json', function(data) {
+    pacienti = data;
+});
+
+$.getJSON('data/specialitati.json', function(data) {
+    specialitati = data;
+});
+
+$.getJSON('data/pacienti.json', function(data) {
+        $.each(data.pacienti, function(i, f) {
+            var tblRow = "<tr>" +
+                "<td>" + f.nrCrt + "</td>" +
+                "<td>" + f.nume + "</td>" +
+                "<td>" + f.prenume + "</td>" +
+                "<td>" + f.email + "</td>" +
+                "<td>" + f.dataNasterii + "</td>" +
+                "<td>" + f.adresa + "</td>" +
+                '<td><button type="button" onclick="window.location.href=\'introducere_reteta2.html\'" class="btn btn-lg btn-success">Alege</button></td>' +
+                "</tr>";
+            $(tblRow).appendTo(".pacientiTable tbody");
+        });
+
+    });
+
 $( "#loginId" ).click(function() {
 	var username = document.getElementById("username").value;
 	var pass = document.getElementById("password").value;
@@ -26,7 +68,7 @@ $( "#logout" ).click(function() {
 //plasare_intrebare
 /* ************************************************************************************************ */
 
-$( "#butonPlasareIntrebare" ).click(function() {
+$("#butonPlasareIntrebare" ).click(function() {
 	var intrebare = document.getElementById("intrebarePlasata").value;
     var specialitate = document.getElementById("specIntrebarePlasata").value;
     

@@ -1,0 +1,32 @@
+[
+    {
+        "pacientId": 1,
+        "intrebare": "Intrebare 1 4mok",
+        "specialitate": "Ginecologie",
+        "comentarii": [
+            {
+                "medicId": 1,
+                "comentariu": "Comentariu 1 Pacient 1"
+            }
+        ]
+    },
+    {
+        "pacientId": 2,
+        "intrebare": "Intrebare 2",
+        "specialitate": "Oncologie",
+        "comentarii": [
+            {
+                "medicId": 5,
+                "comentariu": "Comentariu 1 Pacient 2"
+            },
+            {
+                "medicId": 7,
+                "comentariu": "Comentariu 2 Pacient 2"
+            },
+            {
+                "medicId": 9,
+                "comentariu": "Comentariu 3 Pacient 2"
+            }
+        ]
+    }
+]

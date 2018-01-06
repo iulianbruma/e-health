@@ -5,63 +5,72 @@
       "nume": "Achimaș Cadariu Patriciu",
       "ocupatie": "Medic primar ginecolog",
       "nota": "4.9",
-      "stele": "★★★★☆"
+      "stele": "★★★★☆",
+      "imagine": "images/medici/medic_1.jpg"
     },
     {
       "nrCrt": "2",
       "nume": "Bărbuș Elena",
       "ocupatie": "Medic specialist - Medicină nucleară",
       "nota": "3.9",
-      "stele": "★★★☆☆"
+      "stele": "★★★☆☆",
+      "imagine": "images/medici/medic_2.jpg"
     },
     {
       "nrCrt": "3",
       "nume": "Blag Dorel",
       "ocupatie": "Medic primar anestezie - terapie intensivă",
       "nota": "5,0",
-      "stele": "★★★★★"
+      "stele": "★★★★★",
+      "imagine": "images/medici/medic_3.jpg"
     },
     {
       "nrCrt": "4",
       "nume": "Bojan Anca",
       "ocupatie": "Medic primar medicină internă, Hermatologie",
       "nota": "3,5",
-      "stele": "★★★☆☆"
+      "stele": "★★★☆☆",
+      "imagine": "images/medici/medic_4.jpg"
     },
     {
       "nrCrt": "5",
       "nume": "Burz Claudia",
       "ocupatie": "Medic primar oncologie medicală - chimioterapie",
       "nota": "4.8",
-      "stele": "★★★★☆"
+      "stele": "★★★★☆",
+      "imagine": "images/medici/medic_5.jpg"
     },
     {
       "nrCrt": "6",
       "nume": "Căinap Călin Ion",
       "ocupatie": "Medic primar oncologie medicală - chimioterapie, oncologie digestivă",
       "nota": "4.9",
-      "stele": "★★★★☆"
+      "stele": "★★★★☆",
+      "imagine": "images/medici/medic_6.jpg"
     },
     {
       "nrCrt": "7",
       "nume": "Cebotariu Cristina",
       "ocupatie": "Medic primar oncologie generală și chimioterapie",
       "nota": "2.2",
-      "stele": "★★☆☆☆"
+      "stele": "★★☆☆☆",
+      "imagine": "images/medici/medic_7.jpg"
     },
     {
       "nrCrt": "8",
       "nume": "Cernea Dana",
       "ocupatie": "Medic primar radioterapie. Medic specialist oncologie generală și chimioterapie",
       "nota": "5.0",
-      "stele": "★★★★★"
+      "stele": "★★★★★",
+      "imagine": "images/medici/medic_8.jpg"
     },
     {
       "nrCrt": "9",
       "nume": "Cernea Valentin",
       "ocupatie": "Medic primar oncologie radioterapie",
       "nota": "3.4",
-      "stele": "★★★☆☆"
+      "stele": "★★★☆☆",
+      "imagine": "images/medici/medic_9.jpg"
     }
   ]
 }
