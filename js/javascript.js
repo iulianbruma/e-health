@@ -69,3 +69,26 @@ $( "#adaugaComentariuButton" ).click(function() {
 		$(comentariuNou).prependTo("#listaComentarii");
     }
 });
+
+function resetFields() {
+	var inputs = document.querySelectorAll("input[type=text]");
+	
+	for (i = 0; i < inputs.length; i++) {
+		inputs[i].value = "";
+		inputs[i].style.backgroundColor = "orange";
+	}
+	nume = false;
+	adresa = false;
+	data = false;
+	telefon = false;
+	email = false;
+	document.getElementById("infoText").style.display = "none";
+}
+
+function trimite() {
+	document.getElementById("infoText").style.display = "flex";
+	if (nume && adresa && data && telefon && email) {
+		document.getElementById("#infoText").innerHTML = "Datele au fost introduse corect!";
+	}
+}
+
