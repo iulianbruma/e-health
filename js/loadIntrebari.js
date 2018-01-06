@@ -90,13 +90,13 @@ function getSpecialitate(id) {
 
 $( "#cautaIntrebDupaSpecialitate" ).keyup(function() {
     $('#vizIntrebariSpecs span').remove();
-    $('#vizIntrebariSpecs div').hide();
+    $('#vizIntrebariSpecs div').remove();
     var el1 = $( this ).val();
+    var divSpec = 
+            '<div class="col-md-12 border bg-white pre-scrollable" style="position: absolute; z-index: 1">';
+    
     if (el1 != "") {
-        var divSpec = 
-            '<div class="col-md-12 border bg-white pre-scrollable" style="position: absolute;">';
         var specs;
-
         $.each(specialitati, function(i, f) {
 
             if (f.nume.toLocaleLowerCase().includes(el1.toLocaleLowerCase())) {
@@ -109,13 +109,23 @@ $( "#cautaIntrebDupaSpecialitate" ).keyup(function() {
                 }
             } 
         });
-        if (specs != null) {
-            divSpec = divSpec + specs + '</div>';
-            $(divSpec).appendTo('#vizIntrebariSpecs');
-            $('#vizIntrebariSpecs div').show();
-        }
     } else {
-        $('#vizIntrebariSpecs div').hide();
+        var specs;
+        $.each(specialitati, function(i, f) {
+            var spanSpec = '<span id="' + f.id +  
+                    '" class="row specSpan" onclick="getSpecialitate(this.id)">' + f.nume + '</span>';
+                if (specs == null) {
+                    specs = spanSpec;
+                } else {
+                    specs = specs + spanSpec;
+                }
+        });
+        //$('#vizIntrebariSpecs div').hide();
+    }
+    if (specs != null) {
+        divSpec = divSpec + specs + '</div>';
+        $(divSpec).appendTo('#vizIntrebariSpecs');
+        $('#vizIntrebariSpecs div').show();
     }
 
 });
