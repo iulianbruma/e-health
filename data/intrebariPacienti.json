@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "pacientId": 1,
         "intrebare": "Intrebare 1 4mok",
         "specialitate": "Ginecologie",
@@ -11,6 +12,7 @@
         ]
     },
     {
+        "id": 2,
         "pacientId": 2,
         "intrebare": "Intrebare 2",
         "specialitate": "Oncologie",

@@ -15,6 +15,9 @@ $.getJSON('data/medici.json', function(data) {
 });
 
 $(function() {
+    //folosim asta pentru a reseta intrebarile la cele din fisierul json
+    //localStorage.removeItem('intrebariList');
+    
     var localS = localStorage.getItem("intrebariList");
     console.log(localS);
     if (localS == null) {
@@ -53,6 +56,7 @@ $( "#loginId" ).click(function() {
 	var pass = document.getElementById("password").value;
 	
 	if (username == "admin" && pass == "password") {
+        localStorage.setItem("userLogat", JSON.stringify(medici.medici[0]));
 		window.location.href = "medic.html";
 	} else if (username == "pacient" && pass == "pacient") {
 		window.location.href="pacient.html";
@@ -62,6 +66,7 @@ $( "#loginId" ).click(function() {
  });
  
 $( "#logout" ).click(function() {
+    localStorage.removeItem("userLogat");
 	window.location.href = "index.html";
 });
 
