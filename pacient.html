@@ -86,6 +86,30 @@
 
     <!-- Page Content -->
     <div class="container">
+      <br><div>
+        <form class="d-inline-flex searchTratament">
+            Căutare tratament după codul de pe rețetă:
+            <input class="searchTratamentInput ml-2 mr-4" type="text" name="search" value=""><br>
+            <input class="btn btn-success" type="submit" value="Search">
+        </form>
+      </div>
+      <!-- Modal EROARE -->
+      <div class="modal fade" id="cautareTratamentEroare" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Căutare tratament</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>EROARE - Nu aveți nici un tratament cu acest cod.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 	  <div class="row" style="margin-top: 5%;">
 		<div class="col-md-4"></div>

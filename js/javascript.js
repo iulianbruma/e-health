@@ -103,3 +103,16 @@ $(document).ready(function() {
     $("#numePacient").text(urlParams.get("nume")+" "+urlParams.get("prenume"));
 });
 
+$(".searchTratament").on("submit", function(){
+    var searchTratamentInput = $(".searchTratamentInput").val();
+
+    if(searchTratamentInput=="1" || searchTratamentInput=="2"){
+        window.location.href = "vizTrat2.html";
+    }
+    else{
+        $("#cautareTratamentEroare").modal();
+    }
+
+    return false;
+});
+
