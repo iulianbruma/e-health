@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+
     var title,buttonOnClickHref;
     title =$("title") .text();
     if(title==="Introducere rețetă"){
@@ -24,7 +26,12 @@ function loadTable(buttonOnClickHref, searchPacientInput){
 
     $.getJSON('data/pacienti.json', function(data) {
         $.each(data.pacienti, function(i, f) {
-            if(f.nume.includes(searchPacientInput) || f.prenume.includes(searchPacientInput)){
+            if(f.nume.includes(searchPacientInput) ||
+                f.prenume.includes(searchPacientInput) ||
+                (f.nume+" "+f.prenume).includes(searchPacientInput) ||
+                (f.prenume+" "+f.nume).includes(searchPacientInput) ||
+                f.adresa.includes(searchPacientInput)){
+
                 var tblRow = "<tr>" +
                     "<td>" + f.nrCrt + "</td>" +
                     "<td>" + f.nume + "</td>" +

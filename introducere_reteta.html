@@ -14,6 +14,7 @@
 
     <link href="css/stylesheet.css" rel="stylesheet">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -58,7 +59,10 @@
 
     <div class="container">
         <h1 class="well text-center mb-5">Introducere rețetă</h1>
-        <h6>Alegeți pacientul:</h6>
+        <div class="d-inline-flex">
+            <h6>Alegeți pacientul:</h6>&nbsp
+            <a href="#" data-toggle="tooltip" title="Puteți căuta pacientul căruia doriți să-i introduceți o rețetă după nume, prenume sau adresă."><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+        </div>
         <div>
             <form class="d-inline-flex searchPacient">
                 Caută<br><input class="searchPacientInput ml-2 mr-4" type="text" name="search" value=""><br>
