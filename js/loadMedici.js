@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+
     var title,buttonOnClickHref;
     title =$("title") .text();
     if(title==="Adăugare feedback"){
@@ -21,7 +23,7 @@ function loadTable(buttonOnClickHref, searchMedicInput){
 
     $.getJSON('data/medici.json', function(data) {
         $.each(data.medici, function(i, f) {
-            if(f.nume.includes(searchMedicInput)){
+            if(f.nume.includes(searchMedicInput) || f.ocupatie.includes(searchMedicInput)){
                 var tblRow = "<tr>" +
                     "<td>" + f.nrCrt + "</td>" +
                     "<td>" + f.nume + "</td>" +

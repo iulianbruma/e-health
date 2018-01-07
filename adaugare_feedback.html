@@ -14,6 +14,7 @@
 
     <link href="css/stylesheet.css" rel="stylesheet">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -58,7 +59,10 @@
 
     <div class="container">
         <h1 class="well text-center mb-5">Adăugare feedback</h1>
-        <h6>Alegeți medicul:</h6>
+        <div class="d-inline-flex">
+            <h6>Alegeți medicul:</h6>&nbsp
+            <a href="#" data-toggle="tooltip" title="Puteți căuta medicul despre care doriți să adăugați feedback-ul după nume, prenume sau ocupație."><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+        </div>
         <div>
             <form class="d-inline-flex searchMedic">
                 Caută<br><input class="searchMedicInput ml-2 mr-4" type="text" name="search" value=""><br>
