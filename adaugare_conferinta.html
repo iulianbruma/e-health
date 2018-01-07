@@ -105,7 +105,7 @@
 						</div>
 					</form>
 				</div>
-				<button id="salveaza" type="button" class="btn btn-lg btn-success" style="margin-bottom: 50px; margin-left: 39%;">Salvează</button>
+				<button id="salveaza" type="button" class="btn btn-lg btn-success" style="margin-bottom: 50px; margin-left: 39%;" data-toggle="modal" data-target="#saveConfirmationModal">Salvează</button>
 				<button id="distribuie" type="button" class="btn btn-lg btn-success" style="margin-bottom: 50px; margin-right: 39%;" data-toggle="modal" data-target="#shareModal">Distribuie</button>
 			</div>
 
@@ -173,15 +173,15 @@
 							</label>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#confirmationModal" data-dismiss="modal">Ok</button>
+							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#shareConfirmationModal" data-dismiss="modal">Ok</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!--Confirmation Modal -->
-		<div class="modal fade" id="confirmationModal" role="dialog">
+		<!-- Share Confirmation Modal -->
+		<div class="modal fade" id="shareConfirmationModal" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -190,6 +190,25 @@
 					</div>
 					<div class="modal-body">
 						<p>Conferința a fost distribuită cu succes.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" onclick="window.location.href='medic.html'" class="btn btn-default" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+			<!-- Save Confirmation Modal -->
+		<div class="modal fade" id="saveConfirmationModal" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Adăugare conferință</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<p>Conferința a fost salvată cu succes.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" onclick="window.location.href='medic.html'" class="btn btn-default" data-dismiss="modal">Ok</button>
