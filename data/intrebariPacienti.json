@@ -4,6 +4,8 @@
         "pacientId": 1,
         "intrebare": "Intrebare 1 4mok",
         "specialitate": "Ginecologie",
+        "simptome": "Durere puternică",
+        "imagine": null,
         "comentarii": [
             {
                 "medicId": 1,
@@ -16,6 +18,8 @@
         "pacientId": 2,
         "intrebare": "Intrebare 2",
         "specialitate": "Oncologie",
+        "simptome": "Tulburări funcţionale, sângerări, adenopatii",
+        "imagine": "pacient_2.jpg",
         "comentarii": [
             {
                 "medicId": 5,

@@ -14,12 +14,32 @@ $(document).ready(function() {
     $('#cautaIntrebDupaSpecialitate').val("");
     $.getJSON('data/intrebariPacienti.json', function(data) {
         $.each(intrebari, function(i, f) {
+            var imagineIntreb = f.imagine;
+        if (imagineIntreb == null) {
             container = 
                 '<div class="row mb-3" style="position: relative;">' + 
                     '<img class="col-md-2 my-auto h-100 w-100" style="max-height: 100px; max-width: 100px;" src="' + pacienti.pacienti[f.pacientId - 1].imagine + '"/>' +
-                    '<span class="col-md-10 border h-25 rounded py-2 text-justify">' + f.intrebare + '</span>' + 
+                    '<span style="background-color: honeydew;" class="col-md-10 border h-25 rounded py-2 text-justify"><i>' + f.intrebare + 
+                    '</i><br> <b>Simptome:</b> <br>--> ' + f.simptome +
+                    '<br><small><i>Nu sunt imagini atasate!</i></small>' + 
+                    '</span>' + 
                 '</div>' + 
                 '<div class="comentariiIntrebare col-md-10 mr-auto ml-auto mb-4">';
+        } else {
+            container = 
+                '<div class="row mb-3" style="position: relative;">' + 
+                    '<img class="col-md-2 my-auto h-100 w-100" style="max-height: 100px; max-width: 100px;" src="' + pacienti.pacienti[f.pacientId - 1].imagine + '"/>' +
+                    '<span style="background-color: honeydew;" class="col-md-10 border h-25 rounded py-2 text-justify"><i>' + f.intrebare + 
+                    '</i><br> <b>Simptome:</b> <br>--> ' + f.simptome +
+                    '<br><small><i>' + 
+                    '<a download href="images/plasareIntrebare/' + imagineIntreb + 
+                    '" title="ImageName">Imaginea atasata!' +
+                    '</a>' + 
+                    '</i></small>' + 
+                    '</span>' + 
+                '</div>' + 
+                '<div class="comentariiIntrebare col-md-10 mr-auto ml-auto mb-4">';
+        }
             comentarii = null;
             var count = 0;
             $.each(f.comentarii, function(i1, f1) {
@@ -31,7 +51,7 @@ $(document).ready(function() {
                             medici.medici[f1.medicId - 1].nume + 
                             '</span>' + 
                         '</div>' + 
-                        '<span class="col-md-9 border h-25 rounded py-2 text-justify">' + f1.comentariu + '</span>';
+                        '<span style="background-color: beige;" class="col-md-9 border h-25 rounded py-2 text-justify">' + f1.comentariu + '</span>';
                 var comentariu2;
 
                 if (medici.medici[f1.medicId - 1].nrCrt === userLogat.nrCrt) {
@@ -60,12 +80,16 @@ $(document).ready(function() {
 
            var container2 = 
                '<div class="row">' + 
-                    '<a id="' + f.pacientId + 
+                    '<a id="' + f.id + 
                     '" data-toggle="modal" onclick="adaugareComentariuLink(this.id)" href="#myModal">Adăugare comentariu</a>' + 
                 '</div>' +
            '</div>';
-            container = container + comentarii + container2;   
-
+            if (comentarii == null) {
+                container = container + container2; 
+            } else {
+                container = container + comentarii + container2; 
+            }
+              
             $(container).appendTo('#tabelVizualIntrebari');
             countIntrebari = countIntrebari + 1;
         });
@@ -120,7 +144,6 @@ $( "#cautaIntrebDupaSpecialitate" ).keyup(function() {
                     specs = specs + spanSpec;
                 }
         });
-        //$('#vizIntrebariSpecs div').hide();
     }
     if (specs != null) {
         divSpec = divSpec + specs + '</div>';
@@ -153,14 +176,38 @@ function adaugareComentariuLink(id) {
     $('.adaugareComentariuButon').attr('id', id);
 };
 
+/*$('#cautaIntrebDupaSpecialitate').blur(function() {
+    $('#vizIntrebariSpecs .pre-scrollable').hide();
+});*/
+
 function generateContainer(intrebList) {
     $.each(intrebList, function(i, f) {
-        container = 
-            '<div class="row mb-3" style="position: relative;">' + 
-                '<img class="col-md-2 my-auto h-100 w-100" style="max-height: 100px; max-width: 100px;" src="' + pacienti.pacienti[f.pacientId - 1].imagine + '"/>' +
-                '<span class="col-md-10 border h-25 rounded py-2 text-justify">' + f.intrebare + '</span>' + 
-            '</div>' + 
-            '<div class="comentariiIntrebare col-md-10 mr-auto ml-auto mb-4">';
+        var imagineIntreb = f.imagine;
+        if (imagineIntreb == null) {
+            container = 
+                '<div class="row mb-3" style="position: relative;">' + 
+                    '<img class="col-md-2 my-auto h-100 w-100" style="max-height: 100px; max-width: 100px;" src="' + pacienti.pacienti[f.pacientId - 1].imagine + '"/>' +
+                    '<span style="background-color: honeydew;" class="col-md-10 border h-25 rounded py-2 text-justify"><i>' + f.intrebare + 
+                    '</i><br> <b>Simptome:</b> <br>--> ' + f.simptome +
+                    '<br><small><i>Nu sunt imagini atasate!</i></small>' + 
+                    '</span>' + 
+                '</div>' + 
+                '<div class="comentariiIntrebare col-md-10 mr-auto ml-auto mb-4">';
+        } else {
+            container = 
+                '<div class="row mb-3" style="position: relative;">' + 
+                    '<img class="col-md-2 my-auto h-100 w-100" style="max-height: 100px; max-width: 100px;" src="' + pacienti.pacienti[f.pacientId - 1].imagine + '"/>' +
+                    '<span style="background-color: honeydew;" class="col-md-10 border h-25 rounded py-2 text-justify"><i>' + f.intrebare + 
+                    '</i><br> <b>Simptome:</b> <br>--> ' + f.simptome +
+                    '<br><small><i>' + 
+                    '<a download href="images/plasareIntrebare/' + imagineIntreb + 
+                    '" title="ImageName">Imaginea atasata!' +
+                    '</a>' + 
+                    '</i></small>' + 
+                    '</span>' + 
+                '</div>' + 
+                '<div class="comentariiIntrebare col-md-10 mr-auto ml-auto mb-4">';
+        }
         comentarii = null;
         var count = 0;
         $.each(f.comentarii, function(i1, f1) {
@@ -172,7 +219,7 @@ function generateContainer(intrebList) {
                             medici.medici[f1.medicId - 1].nume + 
                             '</span>' + 
                         '</div>' + 
-                        '<span class="col-md-9 border h-25 rounded py-2 text-justify">' + f1.comentariu + '</span>';
+                        '<span style="background-color: beige;" class="col-md-9 border h-25 rounded py-2 text-justify">' + f1.comentariu + '</span>';
                 var comentariu2;
             var intrebareId = parseInt(f.id) - 1;
                 console.log(medici.medici[f1.medicId - 1].nrCrt === userLogat.nrCrt);
@@ -202,14 +249,17 @@ function generateContainer(intrebList) {
 
        var container2 = 
            '<div class="row">' + 
-                '<a id="' + f.pacientId + 
+                '<a id="' + f.id + 
                 '" data-toggle="modal" onclick="adaugareComentariuLink(this.id)" href="#myModal">Adăugare comentariu</a>' + 
             '</div>' +
        '</div>';
-        container = container + comentarii + container2;   
+        if (comentarii == null) {
+            container = container + container2; 
+        } else {
+            container = container + comentarii + container2; 
+        }
 
         $(container).appendTo('#tabelVizualIntrebari');
-        //countIntrebari = countIntrebari + 1;
     });
     $('#tabelVizualIntrebari').show();
 }

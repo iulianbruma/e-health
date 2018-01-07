@@ -1,6 +1,7 @@
 {
   "pacienti": [
     {
+      "id": 1,
       "nrCrt": "1",
       "nume": "Aanei",
       "prenume": "Ion",
@@ -10,6 +11,7 @@
       "imagine": "images/pacienti/pacient_1.jpg"
     },
     {
+      "id": 2,
       "nrCrt": "2",
       "nume": "Acasandri",
       "prenume": "Maria",
@@ -19,6 +21,7 @@
       "imagine": "images/pacienti/pacient_2.jpg"
     },
     {
+      "id": 3,
       "nrCrt": "3",
       "nume": "Adami",
       "prenume": "Gheorghe",
@@ -28,6 +31,7 @@
       "imagine": "images/pacienti/pacient_3.jpg"
     },
     {
+      "id": 4,
       "nrCrt": "4",
       "nume": "Anastasie",
       "prenume": "Ana",
@@ -37,6 +41,7 @@
       "imagine": "images/pacienti/pacient_4.jpg"
     },
     {
+      "id": 5,
       "nrCrt": "5",
       "nume": "Pop",
       "prenume": "Ion",
@@ -46,6 +51,7 @@
       "imagine": "images/pacienti/pacient_5.jpg"
     },
     {
+      "id": 6,
       "nrCrt": "6",
       "nume": "Pop",
       "prenume": "Maria",
@@ -55,6 +61,7 @@
       "imagine": "images/pacienti/pacient_6.jpg"
     },
     {
+      "id": 7,
       "nrCrt": "7",
       "nume": "Popescu",
       "prenume": "Gheorghe",
@@ -64,6 +71,7 @@
       "imagine": "images/pacienti/pacient_7.jpg"
     },
     {
+      "id": 8,
       "nrCrt": "8",
       "nume": "Bot",
       "prenume": "Popescu",
