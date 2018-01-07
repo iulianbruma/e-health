@@ -1,68 +1,84 @@
 {
   "pacienti": [
     {
+      "id": 1,
       "nrCrt": "1",
       "nume": "Aanei",
       "prenume": "Ion",
       "email": "aanei.ion@gmail.com",
       "dataNasterii": "14.10.1987",
-      "adresa": "Str. Observatorului 8/14, Cluj-Napoca"
+      "adresa": "Str. Observatorului 8/14, Cluj-Napoca",
+      "imagine": "images/pacienti/pacient_1.jpg"
     },
     {
+      "id": 2,
       "nrCrt": "2",
       "nume": "Acasandri",
       "prenume": "Maria",
       "email": "acasandri.maria@gmail.com",
       "dataNasterii": "31.01.1990",
-      "adresa": "Str. Lunii 12/4, Cluj-Napoca"
+      "adresa": "Str. Lunii 12/4, Cluj-Napoca",
+      "imagine": "images/pacienti/pacient_2.jpg"
     },
     {
+      "id": 3,
       "nrCrt": "3",
       "nume": "Adami",
       "prenume": "Gheorghe",
       "email": "adami.gheorghe@gmail.com",
       "dataNasterii": "23.02.1968",
-      "adresa": "Str. Dorobantilor 3/4, Cluj-Napoca"
+      "adresa": "Str. Dorobantilor 3/4, Cluj-Napoca",
+      "imagine": "images/pacienti/pacient_3.jpg"
     },
     {
+      "id": 4,
       "nrCrt": "4",
       "nume": "Anastasie",
       "prenume": "Ana",
       "email": "ana01@gmail.com",
       "dataNasterii": "03.12.1973",
-      "adresa": "Str. Baritiu 42/3, Cluj-Napoca"
+      "adresa": "Str. Baritiu 42/3, Cluj-Napoca",
+      "imagine": "images/pacienti/pacient_4.jpg"
     },
     {
+      "id": 5,
       "nrCrt": "5",
       "nume": "Pop",
       "prenume": "Ion",
       "email": "pop.ion@gmail.com",
       "dataNasterii": "14.10.1987",
-      "adresa": "Str. Observatorului 8/14, Cluj-Napoca"
+      "adresa": "Str. Observatorului 8/14, Cluj-Napoca",
+      "imagine": "images/pacienti/pacient_5.jpg"
     },
     {
+      "id": 6,
       "nrCrt": "6",
       "nume": "Pop",
       "prenume": "Maria",
       "email": "pop.maria@gmail.com",
       "dataNasterii": "31.01.1990",
-      "adresa": "Str. Lunii 12/4, Cluj-Napoca"
+      "adresa": "Str. Lunii 12/4, Cluj-Napoca",
+      "imagine": "images/pacienti/pacient_6.jpg"
     },
     {
+      "id": 7,
       "nrCrt": "7",
       "nume": "Popescu",
       "prenume": "Gheorghe",
       "email": "gheorghe@gmail.com",
       "dataNasterii": "23.02.1968",
-      "adresa": "Str. Dorobantilor 3/4, Cluj-Napoca"
+      "adresa": "Str. Dorobantilor 3/4, Cluj-Napoca",
+      "imagine": "images/pacienti/pacient_7.jpg"
     },
     {
+      "id": 8,
       "nrCrt": "8",
       "nume": "Bot",
       "prenume": "Popescu",
       "email": "bot01@gmail.com",
       "dataNasterii": "03.12.1973",
-      "adresa": "Str. Baritiu 42/3, Cluj-Napoca"
+      "adresa": "Str. Baritiu 42/3, Cluj-Napoca",
+      "imagine": "images/pacienti/pacient_8.jpg"
     }
   ]
 }

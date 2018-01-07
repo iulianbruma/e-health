@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nume": "Chimioterapie"
+    },
+    {
+        "id": 2,
+        "nume": "Chirurgie"
+    },
+    {
+        "id": 3,
+        "nume": "Ginecologie"
+    },
+    {
+        "id": 4,
+        "nume": "Oncologie"
+    },
+    {
+        "id": 5,
+        "nume": "Stomatologie"
+    },
+    {
+        "id": 6,
+        "nume": "Urologie"
+    }
+]
