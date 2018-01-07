@@ -1,4 +1,12 @@
 $(document).ready(function() {
+    var title,buttonOnClickHref;
+    title =$("title") .text();
+    if(title==="Introducere rețetă"){
+        buttonOnClickHref = "introducere_reteta2.html";
+    }
+    else if(title==="Vizualizare date"){
+        buttonOnClickHref = "vizualizare_date2.html";
+    }
 
     var pacienti = [];
 
@@ -11,7 +19,7 @@ $(document).ready(function() {
                 "<td>" + f.email + "</td>" +
                 "<td>" + f.dataNasterii + "</td>" +
                 "<td>" + f.adresa + "</td>" +
-                '<td><button type="button" onclick="window.location.href=\'introducere_reteta2.html\'" class="btn btn-lg btn-success">Alege</button></td>' +
+                '<td><button type="button" onclick="window.location.href=\''+buttonOnClickHref+'?nume='+f.nume+'&prenume='+f.prenume+'&varsta='+(2017-parseInt(f.dataNasterii.split(".").pop()))+'\'" class="btn btn-lg btn-success">Alege</button></td>' +
                 "</tr>";
             $(tblRow).appendTo(".pacientiTable tbody");
         });
@@ -33,7 +41,7 @@ $(document).ready(function() {
                         "<td>" + f.email + "</td>" +
                         "<td>" + f.dataNasterii + "</td>" +
                         "<td>" + f.adresa + "</td>" +
-                        '<td><button type="button" onclick="window.location.href=\'introducere_reteta2.html\'" class="btn btn-lg btn-success">Alege</button></td>' +
+                        '<td><button type="button" onclick="window.location.href=\''+buttonOnClickHref+'?nume='+f.nume+'&prenume='+f.prenume+'&varsta='+(2017-parseInt(f.dataNasterii.split(".").pop()))+'\'" class="btn btn-lg btn-success">Alege</button></td>' +
                         "</tr>";
                     $(tblRow).appendTo(".pacientiTable tbody");
                 }

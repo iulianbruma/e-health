@@ -91,7 +91,7 @@ $( "#adaugaComentariuButton" ).click(function() {
 
 function resetFields() {
 	var inputs = document.querySelectorAll("input[type=text]");
-	
+
 	for (i = 0; i < inputs.length; i++) {
 		inputs[i].value = "";
 		inputs[i].style.backgroundColor = "orange";
@@ -110,4 +110,10 @@ function trimite() {
 		document.getElementById("#infoText").innerHTML = "Datele au fost introduse corect!";
 	}
 }
+
+$(document).ready(function() {
+    var urlParams = new URLSearchParams(window.location.search);
+
+    $("#numePacient").text(urlParams.get("nume")+" "+urlParams.get("prenume"));
+});
 

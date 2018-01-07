@@ -1,3 +1,10 @@
+$(document).ready(function() {
+    var urlParams = new URLSearchParams(window.location.search);
+
+    $("#numePacient").text("Nume: "+urlParams.get("nume")+" "+urlParams.get("prenume")+".");
+    $("#varstaPacient").text("Vârsta: "+urlParams.get("varsta")+".");
+});
+
 $( "#adaugareMedicamentNou" ).click(function() {
     var tblRow = '<tr>' +
         '<td><input type="text" class="form-control" value="" /></td>' +

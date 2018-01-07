@@ -1,3 +1,9 @@
+$(document).ready(function() {
+    var urlParams = new URLSearchParams(window.location.search);
+
+    $("#numeMedic").text("Nume: "+urlParams.get("nume")+".");
+});
+
 var $star_rating = $('.star-rating .fa');
 
 var SetRatingStar = function() {

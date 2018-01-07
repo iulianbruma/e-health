@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    var title,buttonOnClickHref;
+    title =$("title") .text();
+    if(title==="Adăugare feedback"){
+        buttonOnClickHref = "adaugare_feedback2.html";
+    }
 
     var medici = [];
 
@@ -10,7 +15,7 @@ $(document).ready(function() {
                 "<td>" + f.ocupatie + "</td>" +
                 "<td>" + f.nota + "</td>" +
                 "<td class='text-warning'>" + f.stele + "</td>" +
-                '<td><button type="button" onclick="window.location.href=\'adaugare_feedback2.html\'" class="btn btn-lg btn-success">Adaugă recenzii</button></td>' +
+                '<td><button type="button" onclick="window.location.href=\''+buttonOnClickHref+'?nume='+f.nume+'\'" class="btn btn-lg btn-success">Adaugă recenzii</button></td>' +
                 "</tr>";
             $(tblRow).appendTo(".mediciTable tbody");
         });
@@ -31,7 +36,7 @@ $(document).ready(function() {
                         "<td>" + f.ocupatie + "</td>" +
                         "<td>" + f.nota + "</td>" +
                         "<td class='text-warning'>" + f.stele + "</td>" +
-                        '<td><button type="button" onclick="window.location.href=\'adaugare_feedback2.html\'" class="btn btn-lg btn-success">Adaugă recenzii</button></td>' +
+                        '<td><button type="button" onclick="window.location.href=\''+buttonOnClickHref+'?nume='+f.nume+'\'" class="btn btn-lg btn-success">Adaugă recenzii</button></td>' +
                         "</tr>";
                     $(tblRow).appendTo(".mediciTable tbody");
                 }
