@@ -34,11 +34,16 @@ $("#butonPlasareIntrebare" ).click(function() {
         
         if (simptome != "") {
             intrebareObj.simptome = simptome;
+        } else {
+            intrebareObj.simptome = "Nu sunt!";
         }
         
         if (numeFisier != "") {
             intrebareObj.imagine = numeFisier;
+        } else {
+            intrebareObj.imagine = null;
         }
+        
         intrebari.push(intrebareObj);
         localStorage.setItem("intrebariList", JSON.stringify(intrebari));
         $('#butonPlasIntrebConfirm').click();
