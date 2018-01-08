@@ -1,0 +1,33 @@
+{
+  "tratamente": [
+
+    {
+      "nrCrt": "1",
+      "dataConsultatiei": "11.11.2017",
+      "medic": "Achimaș Cadariu Patriciu",
+      "diagnostic": "Gripa",
+	  "medicament": "ACC"
+    },
+    {
+      "nrCrt": "2",
+      "dataConsultatiei": "12.11.2017",
+      "medic": "Bojan Anca",
+      "diagnostic": "Viroza",
+	   "medicament": "Faringosept"
+    },
+    {
+      "nrCrt": "3",
+      "dataConsultatiei": "10.11.2015",
+      "medic": "Bojan Anca",
+      "diagnostic": "Bronsita",
+	   "medicament": "Theraflu Sinus"
+    },
+  {
+      "nrCrt": "4",
+      "dataConsultatiei": "10.11.2010",
+      "medic": "Burz Claudia",
+      "diagnostic": "Bronsita",
+	  "medicament": "Paracetamol"
+    }
+  ]
+}

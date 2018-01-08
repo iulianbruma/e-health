@@ -57,7 +57,18 @@
 	<br>
     <div class="container" style="margin-bottom: 16%;">
         <h1 class="well text-center mb-5">Vizualizare tratament</h1>
-        <table class="table table-bordered text-center">
+		
+	
+	
+	<h6>Introduceți medicamentul: </h6>
+    <div>
+        <form class="d-inline-flex ">
+            <input class="cautaMedicamInput mr-4" type="text" name="search" value=""><br>
+           <button type="button" id ="cautaMedicament" class="btn btn-lg btn-success cautaMedicament float-right ">Caută tratament</button>
+        </form>
+    </div><br>
+	
+        <table class="table table-bordered text-center tabelTratamente">
             <thead>
                 <tr>
                     <th>Nr. crt.</th>
@@ -68,26 +79,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td >1</td>
-                    <td>11.11.2011</td>
-                    <td>Chivu Alina</td>
-                    <td>Astm bronșic</td>
-                    <td>
-                        <button type="button" onclick="window.location.href='vizTrat2.html'" class="btn btn-lg btn-success">Vizualizare</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>12.12.2012</td>
-                    <td>Mureșan Alina</td>
-                    <td>Gripă</td>
-                    <td>
-                        <button type="button" onclick="window.location.href='vizTrat2.html'" class="btn btn-lg btn-success">Vizualizare</button>					
-                    </td>
-                </tr>
             </tbody>
         </table>
+		
     </div>
       
 	 <!-- Footer -->
@@ -100,5 +94,7 @@
     <script src="js/jquery/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/javascript.js"></script>
+	<script src="js/loadTratamente.js"></script>
+
 	</body>
 </html>
