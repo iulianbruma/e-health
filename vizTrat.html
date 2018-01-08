@@ -18,35 +18,40 @@
   <body>
 
     <!-- Navigation -->	
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary fixed-top">
-	  <div class="container-fluid">
-		<div class="navbar-header">
-		  <a class="navbar-brand" href="index.html"><img style="height: 40px;" src="images/logo.png" /></a>
-		</div>
-		<ul class="nav navbar-nav navbar-right">
-			<li class="nav-item">
-              <a class="nav-link" href="vizTrat.html">Vizualizare tratament</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Vizualizare intrebari</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Adaugare intrebare</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link" href="adaugare_feedback.html">Adaugare feedback</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link" href="contact.html">Vizualizare conferinte</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link" href="contact.html">"Emergency Call"</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link" href="index.html" id="logout">Logout</a>
-            </li>
-		</ul>
-	  </div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img style="height: 40px;" src="images/logo.png" /></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHealthToogle" aria-controls="navbarHealthToogle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarHealthToogle">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">Vizualizare tratament</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="services.html">Vizualizare intrebari</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="plasare_intrebare.html">Adaugare intrebare</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="adaugare_feedback.html">Adaugare feedback</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Vizualizare conferinte</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="emergency_call1.html">"Emergency Call"</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" id="logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 	</nav>
 	
 	<br>
@@ -88,7 +93,8 @@
 
     <script src="js/jquery/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/javascript.js"></script>
 	<script src="js/loadTratamente.js"></script>
 
-
 	</body>
+</html>

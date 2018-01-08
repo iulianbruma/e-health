@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>e-Health</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/stylesheet.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+  </head>
+
+  <body>
+
+    <!-- Navigation -->	
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img style="height: 40px;" src="images/logo.png" /></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHealthToogle" aria-controls="navbarHealthToogle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarHealthToogle">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
+                    <li class="nav-item">
+                      <a class="nav-link" href="vizTrat.html">Vizualizare tratament</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="services.html">Vizualizare întrebări</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="plasare_intrebare.html">Adăugare întrebare</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="adaugare_feedback.html">Adăugare feedback</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Vizualizare conferințe</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="emergency_call1.html">"Emergency Call"</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" id="logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <h1 class="well text-center mt-5 mb-5">Adăugare întrebare</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label >Specialitate <span class="text-danger">*</span></label>
+                        <select class="form-control" id="specIntrebarePlasata" name="size">
+                            <option value="">Alege o specialitate!</option>
+                        </select> 
+                        <label id="specialitateIntrebError" class="text-danger" style="display: none;" ></label>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-9">
+                        <label>Simptome</label>
+                        <textarea id="simptomeIntrebarePlasata" placeholder="Simptome..." rows="6" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="row mt-5 mb-5">
+                    <div class="col-md-9">
+                        <label>Adăugare imagine</label>
+                        <span id="fisierAdaugat" class="btn btn-default btn-file p-0">
+                            <input type="file">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Întrebare <span class="text-danger">*</span></label>
+                        <textarea id="intrebarePlasata" placeholder="Întrebare..." rows="6" class="form-control"></textarea>
+                        <label id="intrebarePlasataError" class="text-danger" style="display: none;" ></label>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 35%;">
+                    <div class="col-md-12">
+                        <button type="button" id="butonPlasareIntrebare" class="btn btn-lg btn-success float-right">Adaugă rețetă</button>
+                        <button type="button" id="butonPlasIntrebConfirm" data-toggle="modal" data-target="#adaugareIntrebare" hidden="hidden"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade mt-5" id="adaugareIntrebare" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Adăugare Întrebare</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Întrebarea a fost postată cu succes!</p>
+                        <p>O puteți vizualiza în secțiunea "Vizualizare întrebări".</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="window.location.href='pacient.html'" class="btn btn-default" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <hr>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Cei 4 fantastici 2017</p>
+      </div>
+    </footer>
+
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/plasareIntrebare.js"></script>
+
+  </body>
+
+</html>
