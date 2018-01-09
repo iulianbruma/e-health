@@ -18,6 +18,10 @@ body {
   }
 }
 
+table tbody tr:hover {
+    background-color: whitesmoke;
+}
+
 .carousel-item {
   height: 65vh;
   min-height: 300px;

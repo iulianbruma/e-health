@@ -2,6 +2,7 @@
   "tratamente": [
 
     {
+      "id": 1,
       "nrCrt": "1",
       "dataConsultatiei": "11.11.2017",
       "medic": "Achimaș Cadariu Patriciu",
@@ -9,6 +10,7 @@
 	  "medicament": "ACC"
     },
     {
+      "id": 2,
       "nrCrt": "2",
       "dataConsultatiei": "12.11.2017",
       "medic": "Bojan Anca",
@@ -16,13 +18,15 @@
 	   "medicament": "Faringosept"
     },
     {
+      "id": 3,
       "nrCrt": "3",
       "dataConsultatiei": "10.11.2015",
       "medic": "Bojan Anca",
       "diagnostic": "Bronsita",
 	   "medicament": "Theraflu Sinus"
     },
-  {
+    {
+      "id": 4,
       "nrCrt": "4",
       "dataConsultatiei": "10.11.2010",
       "medic": "Burz Claudia",
