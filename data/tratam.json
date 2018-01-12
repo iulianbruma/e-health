@@ -4,7 +4,7 @@
     {
       "id": 1,
       "nrCrt": "1",
-      "dataConsultatiei": "11.11.2017",
+      "dataConsultatiei": "12.11.2017",
       "medic": "Achimaș Cadariu Patriciu",
       "diagnostic": "Gripa",
 	  "medicament": "ACC"
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "nrCrt": "2",
-      "dataConsultatiei": "12.11.2017",
+      "dataConsultatiei": "11.11.2017",
       "medic": "Bojan Anca",
       "diagnostic": "Viroza",
 	   "medicament": "Faringosept"
@@ -28,7 +28,7 @@
     {
       "id": 4,
       "nrCrt": "4",
-      "dataConsultatiei": "19.04.2013",
+      "dataConsultatiei": "24.07.2014",
       "medic": "Burz Claudia",
       "diagnostic": "Raceala",
 	  "medicament": "Paracetamol"
@@ -36,7 +36,7 @@
     {
       "id": 5,
       "nrCrt": "5",
-      "dataConsultatiei": "24.07.2014",
+      "dataConsultatiei": "19.04.2014",
       "medic": "Blag Dorel",
       "diagnostic": "Pneumonie",
 	   "medicament": "Theraflu Sinus"
@@ -44,7 +44,7 @@
     {
       "id": 6,
       "nrCrt": "6",
-      "dataConsultatiei": "22.01.2012",
+      "dataConsultatiei": "22.01.2013",
       "medic": "Căinap Călin Ion",
       "diagnostic": "Tuse",
 	  "medicament": "Paracetamol"
@@ -52,7 +52,7 @@
     {
       "id": 7,
       "nrCrt": "7",
-      "dataConsultatiei": "16.09.2014",
+      "dataConsultatiei": "16.09.2012",
       "medic": "Cernea Dana",
       "diagnostic": "Ciroză",
 	   "medicament": "Theraflu Sinus"
