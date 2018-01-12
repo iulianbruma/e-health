@@ -110,7 +110,7 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	
 	
-	///////////////////////////////////////////////////////////////////////////////////3333333
+	
 	else if(nume == "" && prenume == ""&& email == ""  )
 	{
 	
@@ -268,7 +268,7 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	
 	
-	/////////////////////////////////////////////////////////////////////////////////22222222222
+	
 	else if(nume == "" && prenume == ""  )
 	{
 		document.getElementById("numeError").style.display = "inline";
@@ -519,18 +519,8 @@ $('#salveazaProgramareFirst').click(function() {
 				}
 				 });
 	 });
-				if(!validateEmail(email))
-					{
-						oke=false;
-					document.getElementById("numeError").style.display = "none";
-					document.getElementById("prenumeError").style.display = "none";
-					document.getElementById("emailError").style.display = "inline";
-					document.getElementById("telefonError").style.display = "none";
-					document.getElementById("calendarError").style.display = "none";
-					$('#emailError').html('Emailul trebuie sa aibă structura corectă!');
-					}
-					 
-				else if  (!letters.test(nume) || nume.length<3 )
+	 
+				 if  (!letters.test(nume) || nume.length<3 )
 					{
 							
 					okn=false;
@@ -543,7 +533,7 @@ $('#salveazaProgramareFirst').click(function() {
 					$('#numeError').html('Numele trebuie sa conțină cel puțin trei litere!');
 						
 					}
-
+					
 				else if  (!letters.test(prenume) || prenume.length<3 )
 					{
 					okp=false;
@@ -556,6 +546,21 @@ $('#salveazaProgramareFirst').click(function() {
 					$('#prenumeError').html('Prenumele trebuie sa conțină cel puțin trei litere!');
 						
 					}
+				
+				else if(!validateEmail(email))
+					{
+						oke=false;
+					document.getElementById("numeError").style.display = "none";
+					document.getElementById("prenumeError").style.display = "none";
+					document.getElementById("emailError").style.display = "inline";
+					document.getElementById("telefonError").style.display = "none";
+					document.getElementById("calendarError").style.display = "none";
+					$('#emailError').html('Emailul trebuie sa aibă structura corectă!');
+					}
+					 
+				
+
+			
 					
 				else if  (!pattern.test(telefon) )
 					{
