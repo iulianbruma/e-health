@@ -18,6 +18,14 @@ body {
   }
 }
 
+.modal-header {
+  background-color: aquamarine;
+}
+
+.modal-body {
+  background-color: cornsilk;
+}
+
 table tbody tr:hover {
     background-color: whitesmoke;
 }

@@ -104,7 +104,7 @@
         <div class="row mt-5 mb-5">
             <div class="col-md-12">
                 <!--<button type="button" onclick="getBackTrat()" class="float-left col-md-2 btn btn-success">Înapoi</button>-->
-                <a class="w-25 btn btn-success float-right" data-toggle="modal" href="#adaugaMedicament">Adaugă medicament</a>
+                <a class="w-25 btn btn-success float-right" onclick="refreshDataAddMed()" data-toggle="modal" href="#adaugaMedicament">Adaugă medicament</a>
             </div>
             
         </div>
@@ -132,20 +132,53 @@
         </div>
         
         <!-- Modal -->
+        <div class="modal fade mt-5" id="editareMedicament" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Editare medicament</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body text-center">
+                        
+                        <span>Nume medicament</span>
+                        <input type="text" class="form-control col-md-8 mx-auto mt-2" id="medicamNumeEditatModal" />
+                        <span>Administrare</span>
+                        <textarea id="medicamAdmsEditModal" rows="5" class="form-control col-md-8 mx-auto mt-2 text-justify"></textarea>
+                        <span>Observații</span>
+                        <textarea id="medicamObsEditModal" rows="5" class="form-control col-md-8 mx-auto mt-2 text-justify"></textarea>
+                        <span id="medicamEditatModalMsg" class="text-danger"></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Anulare</button>
+                        <button type="button" onclick="editareMedicamentModal(this.id)" class="btn btn-default acceptEditareMed">Editare</button>
+                        <button type="button" id="buttonDismisModal" hidden="hidden" data-dismiss="modal"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal -->
         <div class="modal fade mt-5" id="adaugaMedicament" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Ștergere medicament</h4>
+                        <h4 class="modal-title">Adăugare medicament</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <div class="modal-body">
-                        <span id="medicamStersModalMsg"></span>
-                        <p class="mt-3"><i>Această operațiune odată executată, nu se mai poate recupera!</i></p>
+                    <div class="modal-body text-center">
+                        
+                        <span>Nume medicament</span>
+                        <input type="text" class="form-control col-md-8 mx-auto mt-2" id="medicamNumeAddModal" />
+                        <span>Administrare</span>
+                        <textarea id="medicamAdmsAddModal" rows="5" class="form-control col-md-8 mx-auto mt-2 text-justify"></textarea>
+                        <span>Observații</span>
+                        <textarea id="medicamObsAddModal" rows="5" class="form-control col-md-8 mx-auto mt-2 text-justify"></textarea>
+                        <span id="medicamAddModalMsg" class="text-danger"></span>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Anulare</button>
-                        <button type="button" onclick="adaugareComentariuIntreb(this.id)" class="adaugareComentariuButon btn btn-default">Ok</button>
+                        <button type="button" onclick="adaugareMedicamentModal()" class="btn btn-default acceptEditareMed">Adăugare</button>
                         <button type="button" id="buttonDismisModal" hidden="hidden" data-dismiss="modal"></button>
                     </div>
                 </div>
