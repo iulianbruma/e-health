@@ -55,19 +55,20 @@
 	</nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container main">
         <h1 class="well text-center mt-5 mb-5">Rectificare tratament</h1>
         <div class="row mb-5">
-            <div class="col-md-8 d-inline-flex">
-                <label class="my-auto mr-2">Căutare pacient: </label>
-                <div class="col-md-4 bg-white" id="vizTratamentPacient">
-                    <input class="form-control col-md-12 ml-2 mr-4" id="cautaTratamenteDupaPacient" type="text" name="cauta">
+            <div class="col-md-12 d-inline-flex">
+                <label class="my-auto mr-1 col-md-1.5">Căutare pacient: </label>
+                <div class="col-md-3 bg-white mr-2" id="vizTratamentPacient">
+                    <input class="form-control col-md-12 ml-2 mr-5" id="cautaTratamenteDupaPacient" type="text" name="cauta">
                 </div>
                 <input class="btn btn-success col-md-2" id="butonTratament" type="submit" value="Caută">
+                <span class=" mx-auto col-md-5 text-danger" id="noTratamenteMsg"></span>
             </div>
         </div>
         <div class="row">
-            <span id="noTratamenteMsg"></span>
+            
             <table class="table table-bordered text-center tabelTratamente">
                 <thead>
                     <tr style="background-color: bisque;">

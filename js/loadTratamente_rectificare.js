@@ -1,41 +1,70 @@
+var pacientSelectat;
+
 $(document).ready(function() {
+    $('.table').hide();
+    $('.main').css("margin-bottom", "22%");
     $('#noTratamenteMsg').hide();
-    $('#cautaIntrebDupaSpecialitate').val("");
-    $.getJSON('data/tratam.json', function(data) {
-		 var tratamenteFinal;
-        $.each(data.tratamente, function(i, f) {
-            var trTratamente = '<tr>' + 
-                '<td class="col-md-2">' + f.nrCrt + '</td>' + 
-                '<td class="col-md-3">' + f.dataConsultatiei + '</td>' + 
-                '<td class="col-md-4">' + f.diagnostic  + '</td>' + 
-                '<td class="col-md-3" id="' + f.id + '"> <input type="button" class="w-50 btn btn-success" onclick="getDateTratament(this.id)" value="Rectifică"></td>'
-                '</tr>';
-            if (tratamenteFinal == null) {
-                tratamenteFinal = trTratamente;
-            } else {
-                tratamenteFinal = tratamenteFinal + trTratamente;
-            }
-        });
-        if (tratamenteFinal == null) {
-            $('.tabelTratamente').hide();
-            $('#noTratamenteMsg').text("Nu sunt tratamente pentru această persoană!");
-            $('#noTratamenteMsg').show();
-        } else {
-            $('.tabelTratamente').show();
-            $(tratamenteFinal).appendTo('.tabelTratamente tbody');
-        }
-    });
+    $('#cautaTratamenteDupaPacient').val("");
+    
 });
+
+function getDateTratament(tratId) {
+    window.location.href='rectificare_tratament2.html?pacientId=' + pacientSelectat.id + '&tratamentId=' + tratId; 
+};
 
 function getPacient(id) {
     $('#vizTratamentPacient span').remove();
     $('#vizTratamentPacient div').hide();
-    var pacient = pacienti.pacienti[id-1];
-    $('#cautaTratamenteDupaPacient').val(pacient.nume + " " + pacient.prenume);
+    pacientSelectat = pacienti.pacienti[id-1];
+    $('#cautaTratamenteDupaPacient').val(pacientSelectat.nume + " " + pacientSelectat.prenume);
 };
 
 $('#butonTratament').click(function() {
-   window.location.href="rectificare_tratament.html"; 
+    var pacientInput = $('#cautaTratamenteDupaPacient').val();
+    //var pacientAles = pacientSelectat.nume + " " + pacientSelectat.prenume;
+    $('.main').css("margin-bottom", "22%");
+    if (pacientInput == "") {
+        $('#noTratamenteMsg').text("Te rog să alegi un pacient înainte de toate!");
+        $('#noTratamenteMsg').show(); 
+        $('table').hide();
+    } else if (pacientSelectat == null) {
+        $('#noTratamenteMsg').text("Alege un pacient din lista afișată mai jos de câmpul de scris!");
+        $('#noTratamenteMsg').show(); 
+        $('table').hide();
+    } else if(pacientInput != pacientSelectat.nume + " " + pacientSelectat.prenume) {
+        $('#noTratamenteMsg').text("Te rog să alegi un nume de pacient fără ca acesta să fie modificat ulterior!");
+        $('#noTratamenteMsg').show(); 
+        $('table').hide();
+    } else {
+        $('.main').css("margin-bottom", "0");
+        $('#noTratamenteMsg').hide();
+        $('table').show();
+        $.getJSON('data/tratam.json', function(data) {
+            var tratamenteFinal;
+            $.each(data.tratamente, function(i, f) {
+                var trTratamente = '<tr>' + 
+                    '<td class="col-md-2">' + f.nrCrt + '</td>' + 
+                    '<td class="col-md-3">' + f.dataConsultatiei + '</td>' + 
+                    '<td class="col-md-4">' + f.diagnostic  + '</td>' + 
+                    '<td class="col-md-3"> <input id="' + f.id + '" type="button" class="w-50 btn btn-success" onclick="getDateTratament(this.id)" value="Rectifică"></td>'
+                    '</tr>';
+                if (tratamenteFinal == null) {
+                    tratamenteFinal = trTratamente;
+                } else {
+                    tratamenteFinal = tratamenteFinal + trTratamente;
+                }
+            });
+            if (tratamenteFinal == null) {
+                $('.tabelTratamente').hide();
+                $('#noTratamenteMsg').text("Nu sunt tratamente pentru această persoană!");
+                $('#noTratamenteMsg').show();
+            } else {
+                $('.tabelTratamente').show();
+                $(tratamenteFinal).appendTo('.tabelTratamente tbody');
+            }
+        });
+    }
+    
 });
 
 $( "#cautaTratamenteDupaPacient" ).keyup(function() {
@@ -79,29 +108,3 @@ $( "#cautaTratamenteDupaPacient" ).keyup(function() {
     }
 
 });
-
-
- $(".cautaMedicament").on("click", function(){
-
-		var tratamente = [];
-        var medicam = $(".cautaMedicamInput").val();
-        var mediciTable = $(".tabelTratamente tbody tr").remove();
-       $.getJSON('data/tratam.json', function(data) {
-           $.each(data.tratamente, function(i, f) {
-
-                if(f.medicament.includes(medicam) ){
-					tratamente.push("<tr>");
-					tratamente.push("<td>" + f.nrCrt + "</td>");
-					tratamente.push("<td>" + f.dataConsultatiei + "</td>");
-					tratamente.push("<td>" + f.medic + "</td>");
-					tratamente.push("<td>" + f.diagnostic + "</td>");
-					tratamente.push('<td><button type="button" onclick="window.location.href=\'vizTrat2.html\'" class="btn btn-lg btn-success">Vizualizare</button></td>');
-					tratamente.push("<tr>");
-					$("<tbody/>", {html: tratamente.join("")}).appendTo('.tabelTratamente');
-               }
-           });
-       });
-
-       return false;
-
- });

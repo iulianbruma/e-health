@@ -9,6 +9,14 @@ var spanClose = document.getElementsByClassName("close")[0];
 var pacienti;
 var medici;
 var specialitati;
+var tratamente;
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
 
 $.getJSON('data/medici.json', function(data) {
     medici = data;
@@ -19,7 +27,6 @@ $(function() {
     //localStorage.removeItem('intrebariList');
     
     var localS = localStorage.getItem("intrebariList");
-    console.log(localS);
     if (localS == null) {
         $.getJSON('data/intrebariPacienti.json', function(data) {
             localStorage.setItem("intrebariList", JSON.stringify(data));
@@ -27,8 +34,24 @@ $(function() {
     }
 });
 
+$(function() {
+    //folosim asta pentru a reseta medicamentele la cele din fisierul json
+    //localStorage.removeItem('medicamenteList');
+    
+    var localS = localStorage.getItem("medicamenteList");
+    if (localS == null) {
+        $.getJSON('data/medicam.json', function(data) {
+            localStorage.setItem("medicamenteList", JSON.stringify(data.medicamente));
+        });
+    }
+});
+
 $.getJSON('data/pacienti.json', function(data) {
     pacienti = data;
+});
+
+$.getJSON('data/tratam.json', function(data) {
+    tratamente = data;
 });
 
 $.getJSON('data/specialitati.json', function(data) {

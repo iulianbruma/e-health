@@ -2,24 +2,46 @@
   "medicamente": [
 
     {
+      "id": 1,
       "medicament": "ACC",
 	  "modAdministrare": "Se administrează după mese",
 	  "observații": "A nu se consuma împreună cu antitusive!"
     },
     {
+      "id": 2,
       "medicament": "Paracetamol",
 	  "modAdministrare": "Se administrează 1-2 comprimate la fiecare 4 ore.",
 	  "observații": "Nu se recomandă utilizarea concomitentă de alte medicamente care conțin paracetamol!"
     },
     {
+      "id": 3,
       "medicament": "Faringosept",
 	  "modAdministrare": "Se administrează imediat după mese (10-15 min).",
 	  "observații": "Se recomandă ca timp de 3 ore sa nu se consume lichide!"
     },
      {
+      "id": 4,
       "medicament": "Theraflu Sinus",
       "modAdministrare": "Se dizolvă un plic in 200 ml apă fierbinte, de două ori pe zi.",
       "observații": "Consumul bauturilor alcoolice este interzis!"
+    },
+    {
+      "id": 5,
+      "medicament": "Aciclovir Terapia",
+	  "modAdministrare": "Doza uzuală este de 200 mg aciclovir, administrat oral de 5 ori pe zi, la intervale de aproximativ 4 ore, cu pauză în timpul nopţii. Durata tratamentului este de 5 zile; în infecţiile severe, tratamentul poate fi prelungit.",
+	  "observații": "Aciclovir Terapia se poate utiliza în timpul sarcinii şi alăptării numai dacă medicul vă recomandă acest lucru."
+    },
+    {
+      "id": 6,
+      "medicament": "Bromhexin",
+	  "modAdministrare": "4 ml (80 picaturi) bromhexin de 3 ori/zi",
+	  "observații": "Nu se recomanda administrarea concomitenta de anticolinergice!"
+    },
+    {
+      "id": 7,
+      "medicament": "Garganta",
+	  "modAdministrare": "Adulţi şi adolescenţi cu vârsta peste 12 ani: 4 până la 8 pulverizări), de 2 până la 6 ori pe zi; la intervale de timp de minimum 1,5 – 3 ore",
+	  "observații": "Trebuie evitat contactul medicamentului cu ochii."
     }
   ]
 }
