@@ -30,7 +30,7 @@ $(document).ready(function() {
             '<td class="col-md-2 align-middle">' + f.medicament + '</td>' + 
             '<td class="col-md-4 align-middle text-justify">' + f.modAdministrare  + '</td>' + 
             '<td class="col-md-3 align-middle text-justify"><i>' + f.observații  + '</i></td>' + 
-            '<td class="col-md-2.5 align-middle">' +
+            '<td class="col-md-2 align-middle">' +
                 '<div class="col-md-12 mx-auto">' +
                     '<a id="' + count + 
                     '_edit" class="w-75 btn btn-success" data-toggle="modal" onclick="editareMedicament(this.id)" href="#editareMedicament">Editare</a>' + 
@@ -56,12 +56,6 @@ $(document).ready(function() {
         $(medicamenteFinal).appendTo('.tabelMedicamente tbody');
     }
 });
-
-/*
-function getBackTrat() {
-    window.location.href='rectificare_tratament.html?pacientId=' + pacientId; 
-}
-*/
 
 function stergeMedicament(id) {
     var idd = id.split("_");

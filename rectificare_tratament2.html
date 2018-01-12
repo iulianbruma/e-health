@@ -12,25 +12,7 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/stylesheet.css" rel="stylesheet">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-      
-      <style>
-/*          .table-fixed thead {
-  width: 97%;
-}
-            .table-fixed tbody {
-              height: 230px;
-              overflow-y: auto;
-              width: 100%;
-            }
-            .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
-              display: block;
-            }
-            .table-fixed tbody td, .table-fixed thead > tr> th {
-              float: left;
-              border-bottom-width: 0;
-            }*/
-      </style>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
   </head>
 
   <body>
@@ -87,20 +69,21 @@
         </div>
         <div class="row">
             <table class="table table-fixed table-bordered text-center tabelMedicamente" style="vertical-align: middle">
-                <thead>
-                    <tr style="background-color: bisque;">
+                <thead style="display: block;">
+                    <tr class="col-md-12" style="background-color: bisque; display:flex; padding: 0 18px 0 0;">
                         <th class="col-md-1">Nr.crt.</th>
                         <th class="col-md-2">Medicament</th>
                         <th class="col-md-4">Mod de administrare</th>
                         <th class="col-md-3">Observații</th>
-                        <th class="col-md-2.5">Opțiuni</th>
+                        <th class="col-md-2">Opțiuni</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody style="height: 484px; display: block; overflow-y: scroll;">
                     
                 </tbody>
             </table>
         </div>
+  
         <div class="row mt-5 mb-5">
             <div class="col-md-12">
                 <!--<button type="button" onclick="getBackTrat()" class="float-left col-md-2 btn btn-success">Înapoi</button>-->
