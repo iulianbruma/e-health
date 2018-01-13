@@ -55,6 +55,7 @@
 	</nav>
 
     <!-- Page Content -->
+    <div id="divLoading"></div>
     <div class="container">
         <h1 class="well text-center mt-5 mb-5">Rectificare tratament</h1>
         <div class="row mb-5">
@@ -167,6 +168,65 @@
                 </div>
             </div>
         </div>
+
+        <br>
+        <div class="w-50 border border-secondary">
+            <div class="p-2">
+                <label>Commentarii</label>
+                <a href="#" data-toggle="tooltip" title="Aici poți adăuga comentarii la acest tratament."><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+            </div>
+            <div class="border p-2">
+                <div class="form-inline">
+                    <div class="form-group w-75">
+                        <input id="adaugaComentariuInput" class="form-control w-100" type="text" placeholder="Comentariul tău." />
+                    </div>
+                    <div class="form-group p-lg-1">
+                        <button id="adaugaComentariuButton" class="btn btn-default">Adaugă</button>
+                    </div>
+                </div>
+                <ul id="listaComentarii" class="list-unstyled p-2">
+                    <li>
+                        <div class="mr-2 float-left">
+                            <img src="http://placekitten.com/50/50" />
+                        </div>
+                        <p class="m-0">Imi provoacă somn, nu reușesc nicicum să ma trezesc deși dorm noaptea câte 10 ore.</p>
+                        <small class="date text-muted">3 Ianuarie 2018</small>
+                    </li>
+                    <li>
+                        <div class="mr-2 float-left">
+                            <img class="rounded-circle" src="http://placekitten.com/45/45" />
+                        </div>
+                        <p class="m-0">Este ceva grav? Nu puteți să îmi scrieți aici despre ce e vorba?</p>
+                        <small class="text-muted">2 Ianuarie 2018</small>
+                    </li>
+                    <li>
+                        <div class="mr-2 float-left">
+                            <img src="http://placekitten.com/40/40" />
+                        </div>
+                        <p class="m-0">Bună ziua, am o problemă cu tratamentul. Când aș putea să vin din nou?</p>
+                        <small class="text-muted">1 Ianuarie 2018</small>
+                    </li>
+                </ul>
+            </div>
+            <!-- Modal EROARE -->
+            <div class="modal fade" id="adaugareComentariuTratamentEroare" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Adăugare comentariu la tratament</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>EROARE - Comentariul trebuie să conțină text.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
       <hr>
 
@@ -181,6 +241,7 @@
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/javascript.js"></script>
     <script src="js/loadTratamente_rectificare2.js"></script>
+    <script src="js/adaugareComentariiTratament.js"></script>
   </body>
 
 </html>
