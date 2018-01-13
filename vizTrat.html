@@ -13,6 +13,7 @@
 
     <link href="css/stylesheet.css" rel="stylesheet">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -61,10 +62,17 @@
 	
 	
 	<h6>Introduceți medicamentul: </h6>
+        
     <div>
         <form class="d-inline-flex ">
             <input class="cautaMedicamInput mr-4" type="text" name="search" value=""><br>
            <button type="button" id ="cautaMedicament" class="btn btn-lg btn-success cautaMedicament float-right ">Caută tratament</button>
+            <a href="#"  data-toggle="tooltip" title="Vizualizați tratamentele care conțin medicamentul căutat."><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+            <button type="button" onclick="window.location.href='vizTrat.html'"  class="btn btn-lg btn-success ml-2">Nefiltrat</button>	
+            <a href="#"  data-toggle="tooltip" title="Vizualizați toate tratamentele."><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+
+
+                                 
         </form>
     </div><br>
 	

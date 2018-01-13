@@ -20,6 +20,7 @@ $(document).ready(function() {
 
  $(".cautaMedicament").on("click", function(){
 
+
 		var tratamente = [];
         var medicam = $(".cautaMedicamInput").val();
         var mediciTable = $(".tabelTratamente tbody tr").remove();
