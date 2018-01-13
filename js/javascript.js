@@ -129,7 +129,7 @@ $(document).ready(function() {
 $(".searchTratament").on("submit", function(){
     var searchTratamentInput = $(".searchTratamentInput").val();
 
-    if(searchTratamentInput=="1" || searchTratamentInput=="2"){
+    if(searchTratamentInput>="1" && searchTratamentInput<="8"){
         window.location.href = "vizTrat2.html";
     }
     else{

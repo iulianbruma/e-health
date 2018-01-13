@@ -1,5 +1,10 @@
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
+
+    var localS = localStorage.getItem("comentariiTratamentList");
+    if(localS != null){
+        $(localS).prependTo("#listaComentarii");
+    }
 });
 
 $( "#adaugaComentariuButton" ).click(function() {
@@ -28,6 +33,14 @@ $( "#adaugaComentariuButton" ).click(function() {
                 '<p class="m-0">'+adaugaComentariuInput+'</p>' +
                 '<small class="date text-muted">16 Ianuarie 2018</small>' +
                 '</li>';
+            var localS = localStorage.getItem("comentariiTratamentList");
+            if(localS != null){
+                localStorage.setItem("comentariiTratamentList", comentariuNou + localS);
+            }
+            else{
+                localStorage.setItem("comentariiTratamentList", comentariuNou);
+            }
+
             $(comentariuNou).prependTo("#listaComentarii");
         }
         else{
