@@ -1,11 +1,3 @@
-
-//Modal - distribuie conferinta adaugata
-var shareModal = document.getElementById('shareModal');
-var btnDistribuie = document.getElementById("distribuie");
-var btnSalveaza = document.getElementById("salveaza");
-var btnDistribuie1 = document.getElementById("distribuie1");
-var spanClose = document.getElementsByClassName("close")[0];
-
 var pacienti;
 var medici;
 var specialitati;
@@ -122,7 +114,6 @@ function trimite() {
 
 $(document).ready(function() {
     var urlParams = new URLSearchParams(window.location.search);
-
     $("#numePacient").text(urlParams.get("nume")+" "+urlParams.get("prenume"));
 });
 
@@ -137,5 +128,9 @@ $(".searchTratament").on("submit", function(){
     }
 
     return false;
+});
+
+$( "#rectificareTratament" ).click(function() {
+    window.location.href="rectificare_tratament.html"+'?pacient='+document.getElementById("numePacient").innerHTML;
 });
 

@@ -4,8 +4,10 @@ $(document).ready(function() {
     $('.table').hide();
     $('.main').css("margin-bottom", "22%");
     $('#noTratamenteMsg').hide();
-    $('#cautaTratamenteDupaPacient').val("");
-    
+
+    var urlParams = new URLSearchParams(window.location.search);
+    var pacient  = urlParams.get("pacient");
+    $('#cautaTratamenteDupaPacient').val(pacient);
 });
 
 function getDateTratament(tratId) {
@@ -17,6 +19,13 @@ function getPacient(id) {
     $('#vizTratamentPacient div').hide();
     pacientSelectat = pacienti.pacienti[id-1];
     $('#cautaTratamenteDupaPacient').val(pacientSelectat.nume + " " + pacientSelectat.prenume);
+};
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
 $('#butonTratament').click(function() {
