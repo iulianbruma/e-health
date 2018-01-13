@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>e-Health</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img style="height: 40px;" src="images/logo.png" /></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHealthToogle" aria-controls="navbarHealthToogle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarHealthToogle">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
+                    <li class="nav-item">
+                      <a class="nav-link" href="inregistrare.html">Inregistrare pacient</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="introducere_reteta.html">Introducere rețetă</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="rectificare_tratament.html">Rectificare tratament</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="vizualizare_date1.html">Vizualizare date monitorizate</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="vizualizare_intrebare.html">Raspunde la întrebări</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="adaugare_conferinta.html">Adăugare conferință</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" id="logout">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <h1 class="well text-center mt-5 mb-5">Rectificare tratament</h1>
+        <div class="row mb-5">
+            <div class="col-md-12 d-inline-flex">
+                    <span class="my-auto mr-2 ml-5">Pacient: </span>
+                    <span class="text-info mr-5 pacientNume">Marinela Popescu</span>
+                    <span class="mr-2">Data: </span>
+                    <span class="text-info mr-5 dataTrat">Data 1</span>
+                    <span class=" mr-2">Diagnostic: </span>
+                    <span class="text-info diagnostTrat">Diagnostic</span>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-fixed table-bordered text-center tabelMedicamente" style="vertical-align: middle">
+                <thead style="display: block;">
+                    <tr class="col-md-12" style="background-color: bisque; display:flex; padding: 0 18px 0 0;">
+                        <th class="col-md-1">Nr.crt.</th>
+                        <th class="col-md-2">Medicament</th>
+                        <th class="col-md-4">Mod de administrare</th>
+                        <th class="col-md-3">Observații</th>
+                        <th class="col-md-2">Opțiuni</th>
+                    </tr>
+                </thead>
+                <tbody style="height: 484px; display: block; overflow-y: scroll;">
+                    
+                </tbody>
+            </table>
+        </div>
+  
+        <div class="row mt-5 mb-5">
+            <div class="col-md-12">
+                <!--<button type="button" onclick="getBackTrat()" class="float-left col-md-2 btn btn-success">Înapoi</button>-->
+                <a class="w-25 btn btn-success float-right" onclick="refreshDataAddMed()" data-toggle="modal" href="#adaugaMedicament">Adaugă medicament</a>
+            </div>
+            
+        </div>
+            
+
+        <!-- Modal -->
+        <div class="modal fade mt-5" id="stergeMedicament" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Ștergere medicament</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <span id="medicamStersModalMsg"></span>
+                        <p class="mt-3"><i>Această operațiune odată executată, nu se mai poate recupera!</i></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Anulare</button>
+                        <button type="button" onclick="stergeMedicament(this.id)" class="btn btn-default acceptStergereMed">Ok</button>
+                        <button type="button" id="buttonDismisModal" hidden="hidden" data-dismiss="modal"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade mt-5" id="editareMedicament" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Editare medicament</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body text-center">
+                        
+                        <span>Nume medicament</span>
+                        <input type="text" class="form-control col-md-8 mx-auto mt-2" id="medicamNumeEditatModal" />
+                        <span>Administrare</span>
+                        <textarea id="medicamAdmsEditModal" rows="5" class="form-control col-md-8 mx-auto mt-2 text-justify"></textarea>
+                        <span>Observații</span>
+                        <textarea id="medicamObsEditModal" rows="5" class="form-control col-md-8 mx-auto mt-2 text-justify"></textarea>
+                        <span id="medicamEditatModalMsg" class="text-danger"></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Anulare</button>
+                        <button type="button" onclick="editareMedicamentModal(this.id)" class="btn btn-default acceptEditareMed">Editare</button>
+                        <button type="button" id="buttonDismisModal" hidden="hidden" data-dismiss="modal"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade mt-5" id="adaugaMedicament" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Adăugare medicament</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body text-center">
+                        
+                        <span>Nume medicament</span>
+                        <input type="text" class="form-control col-md-8 mx-auto mt-2" id="medicamNumeAddModal" />
+                        <span>Administrare</span>
+                        <textarea id="medicamAdmsAddModal" rows="5" class="form-control col-md-8 mx-auto mt-2 text-justify"></textarea>
+                        <span>Observații</span>
+                        <textarea id="medicamObsAddModal" rows="5" class="form-control col-md-8 mx-auto mt-2 text-justify"></textarea>
+                        <span id="medicamAddModalMsg" class="text-danger"></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Anulare</button>
+                        <button type="button" onclick="adaugareMedicamentModal()" class="btn btn-default acceptEditareMed">Adăugare</button>
+                        <button type="button" id="buttonDismisModal" hidden="hidden" data-dismiss="modal"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <hr>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Cei 4 fantastici 2017</p>
+      </div>
+    </footer>
+
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/loadTratamente_rectificare2.js"></script>
+  </body>
+
+</html>
