@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>e-Health</title>
+    <title>Vizualizare date</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -16,52 +16,64 @@
     <!-- Custom styles for this template -->
     <link href="css/stylesheet.css" rel="stylesheet">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-  </head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
 
-  <body>
+<body>
 
-     <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="index.html"><img style="height: 40px;" src="images/logo.png" /></a>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img style="height: 40px;" src="images/logo.png" /></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHealthToogle" aria-controls="navbarHealthToogle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarHealthToogle">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="inregistrare.html">Inregistrare pacient</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="introducere_reteta.html">Introducere reteta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Rectificare tratament</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vizualizare_date1.html">Vizualizare date monitorizate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Raspunde intrebari</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adaugare_conferinta.html">Adaugare conferinta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" id="logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a class="nav-link" href="inregistrare.html">Inregistrare pacient</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="introducere_reteta.html">Introducere rețetă</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Rectificare tratament</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="vizualizare_date1.html">Vizualizare date monitorizate</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Raspunde la întrebări</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="adaugare_conferinta.html">Adăugare conferință</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="logout">Log out</a>
-            </li>
-        </ul>
-      </div>
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container mb-2">
 
-        <h1 style="text-align: center; margin-top: 50px;">Vizualizare date monitorizate</h2>
-
-        <div class="mt-4 mb-4">
-            Căutare: <input type="text" name="cautare" placeholder="Nume și prenume">
+        <h1 class="text-center mt-5 mb-5" >Vizualizare date monitorizate</h1>
+        <div class="d-inline-flex">
+            <h6>Alegeți pacientul:</h6>&nbsp
+            <a href="#" data-toggle="tooltip" title="Puteți căuta pacientul dorit introducând  numele sau prenumele acestuia."><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+        </div>
+        <div class="mt-2 mb-4">
+            <form class="d-inline-flex searchPacient">
+                Căutare: <br><input class="searchPacientInput ml-2 mr-4" type="text" name="cautare" placeholder="Nume și prenume"><br>
+                <input class="btn" type="submit" value="Caută">
+            </form>
         </div>
 
-		<table class="table table-bordered text-center">
+        <table class="table table-bordered text-center pacientiTable mb-5">
             <thead>
                 <tr>
                     <th>Nr. crt.</th>
@@ -70,104 +82,32 @@
                     <th>Email</th>
                     <th>Data nașterii</th>
                     <th>Adresa</th>
-                    <th>        </th>
+                    <th>Alege</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td >1</td>
-                    <td>Abraham</td>
-                    <td>Ion</td>
-                    <td>abraham.ion@yahoo.com</td>
-                    <td>14.10.1987</td>
-                    <td>Str. Observatorului 8/14, Cluj-Napoca</td>
-                    <td>
-                        <button type="button" onclick="window.location.href='vizualizare_date2.html'" class="btn btn-lg btn-success">Alege</button>
-                    </td>
-                </tr>
-                               <tr>
-                    <td >2</td>
-                    <td>Antal</td>
-                    <td>Maria</td>
-                    <td>antal.maria@yahoo.com</td>
-                    <td>14.10.1987</td>
-                    <td>Str. Observatorului 8/14, Cluj-Napoca</td>
-                    <td>
-                        <button type="button" onclick="window.location.href='vizualizare_date2.html'" class="btn btn-lg btn-success">Alege</button>
-                    </td>
-                </tr>
-                                <tr>
-                    <td >3</td>
-                    <td>Ban</td>
-                    <td>Ioan</td>
-                    <td>ban.ioan@yahoo.com</td>
-                    <td>14.10.1987</td>
-                    <td>Str. Observatorului 8/14, Cluj-Napoca</td>
-                    <td>
-                        <button type="button" onclick="window.location.href='vizualizare_date2.html'" class="btn btn-lg btn-success">Alege</button>
-                    </td>
-                </tr>
-                                <tr>
-                    <td >4</td>
-                    <td>Bara</td>
-                    <td>Stefana</td>
-                    <td>bara.stefana@gmail.com</td>
-                    <td>14.10.1987</td>
-                    <td>Str. Observatorului 8/14, Cluj-Napoca</td>
-                    <td>
-                        <button type="button" onclick="window.location.href='vizualizare_date2.html'" class="btn btn-lg btn-success">Alege</button>
-                    </td>
-                </tr>
-                </tr>
-                <tr>
-                    <td >5</td>
-                    <td>Antal</td>
-                    <td>Maria</td>
-                    <td>antal.maria@yahoo.com</td>
-                    <td>14.10.1987</td>
-                    <td>Str. Observatorului 8/14, Cluj-Napoca</td>
-                    <td>
-                        <button type="button" onclick="window.location.href='vizualizare_date2.html'" class="btn btn-lg btn-success">Alege</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td >6</td>
-                    <td>Ban</td>
-                    <td>Ioan</td>
-                    <td>ban.ioan@yahoo.com</td>
-                    <td>14.10.1987</td>
-                    <td>Str. Observatorului 8/14, Cluj-Napoca</td>
-                    <td>
-                        <button type="button" onclick="window.location.href='vizualizare_date2.html'" class="btn btn-lg btn-success">Alege</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td >7</td>
-                    <td>Bara</td>
-                    <td>Stefana</td>
-                    <td>bara.stefana@gmail.com</td>
-                    <td>14.10.1987</td>
-                    <td>Str. Observatorului 8/14, Cluj-Napoca</td>
-                    <td>
-                        <button type="button" onclick="window.location.href='vizualizare_date2.html'" class="btn btn-lg btn-success">Alege</button>
-                    </td>
-                </tr>
             </tbody>
         </table>
-
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Cei 4 fantastici 2017</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+    </div>
+    <!-- /.container -->
+</footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="js/jquery/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/javascript.js"></script>
-
-  </body>
+<!-- Bootstrap core JavaScript -->
+<script src="js/jquery/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/javascript.js"></script>
+<script src="js/loadPacienti.js"></script>
+</body>
 
 </html>

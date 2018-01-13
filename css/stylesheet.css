@@ -8,10 +8,26 @@ body {
   padding-top: 54px;
 }
 
+.specSpan:hover {
+  background-color: aqua;
+}
+
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
   }
+}
+
+.modal-header {
+  background-color: aquamarine;
+}
+
+.modal-body {
+  background-color: cornsilk;
+}
+
+table tbody tr:hover {
+    background-color: whitesmoke;
 }
 
 .carousel-item {
@@ -123,4 +139,23 @@ body {
 
 .login-help{
   font-size: 12px;
+}
+
+#divLoading
+{
+  display : none;
+}
+#divLoading.show
+{
+  display : block;
+  position : fixed;
+  background-image : url('../images/icons/loading.gif');
+  background-color:#666;
+  background-repeat : no-repeat;
+  background-position : center;
+  opacity : 0.4;
+  left : 0;
+  bottom : 0;
+  right : 0;
+  top : 0;
 }

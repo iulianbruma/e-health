@@ -7,7 +7,8 @@
 	  "specialitate": "Ginecologie",
 	  "oras": "Cluj-Napoca",
       "nota": "4.9",
-      "stele": "★★★★☆"
+      "stele": "★★★★☆",
+      "imagine": "images/medici/medic_1.jpg"
     },
     {
       "nrCrt": "2",
@@ -16,7 +17,8 @@
 	  "specialitate": "Medicină nucleară",
 	   "oras": "Cluj-Napoca",
       "nota": "3.9",
-      "stele": "★★★☆☆"
+      "stele": "★★★☆☆",
+      "imagine": "images/medici/medic_2.jpg"
     },
     {
       "nrCrt": "3",
@@ -25,7 +27,8 @@
 	  "specialitate": "Anestezie",
 	  "oras": "Oradea",
       "nota": "5,0",
-      "stele": "★★★★★"
+      "stele": "★★★★★",
+      "imagine": "images/medici/medic_3.jpg"
     },
     {
       "nrCrt": "4",
@@ -34,7 +37,8 @@
 	  "specialitate": "Hematologie",
 	  "oras": "Oradea",
       "nota": "3,5",
-      "stele": "★★★☆☆"
+      "stele": "★★★☆☆",
+      "imagine": "images/medici/medic_4.jpg"
     },
     {
       "nrCrt": "5",
@@ -43,7 +47,8 @@
 	  "specialitate": "Chimioterapie",
 	  "oras": "Sibiu",
       "nota": "4.8",
-      "stele": "★★★★☆"
+      "stele": "★★★★☆",
+      "imagine": "images/medici/medic_5.jpg"
     },
     {
       "nrCrt": "6",
@@ -52,7 +57,8 @@
 	  "specialitate": "Oncologie",
 	  "oras": "Cluj-Napoca",
       "nota": "4.9",
-      "stele": "★★★★☆"
+      "stele": "★★★★☆",
+      "imagine": "images/medici/medic_6.jpg"
     },
     {
       "nrCrt": "7",
@@ -61,7 +67,8 @@
 	  "specialitate": "Oncologie",
 	  "oras": "Oradea",
       "nota": "2.2",
-      "stele": "★★☆☆☆"
+      "stele": "★★☆☆☆",
+      "imagine": "images/medici/medic_7.jpg"
     },
     {
       "nrCrt": "8",
@@ -70,7 +77,8 @@
 	  "specialitate": "Chimioterapie",
 	  "oras": "Sibiu",
       "nota": "5.0",
-      "stele": "★★★★★"
+      "stele": "★★★★★",
+      "imagine": "images/medici/medic_8.jpg"
     },
     {
       "nrCrt": "9",
@@ -79,7 +87,8 @@
 	  "specialitate": "Radioterapie",
 	  "oras": "Sibiu",
       "nota": "3.4",
-      "stele": "★★★☆☆"
+      "stele": "★★★☆☆",
+      "imagine": "images/medici/medic_9.jpg"
     }
   ]
 }

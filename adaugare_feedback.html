@@ -14,78 +14,88 @@
 
     <link href="css/stylesheet.css" rel="stylesheet">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="pacient.html"><img style="height: 40px;" src="images/logo.png" /></a>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img style="height: 40px;" src="images/logo.png" /></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHealthToogle" aria-controls="navbarHealthToogle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarHealthToogle">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="vizTrat.html">Vizualizare tratament</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Vizualizare intrebari</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="plasare_intrebare.html">Adaugare intrebare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adaugare_feedback.html">Adaugare feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Vizualizare conferinte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="emergency_call1.html">"Emergency Call"</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" id="logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-                <a class="nav-link" href="vizTrat.html">Vizualizare tratament</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Vizualizare intrebari</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Adaugare intrebare</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="adaugare_feedback.html">Adaugare feedback</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Vizualizare conferinte</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">"Emergency Call"</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="index.html" id="logout">Logout</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+	</nav>
 
-<br>
+    <br>
 
-<div class="container">
-    <h1 class="well text-center mb-5">Adăugare feedback</h1>
-    <h6>Alegeți medicul:</h6>
-    <div>
-        <form class="d-inline-flex searchMedic">
-            Caută<br><input class="searchMedicInput ml-2 mr-4" type="text" name="search" value=""><br>
-            <input class="btn" type="submit" value="Search">
-        </form>
-    </div><br>
-    <table class="table table-bordered text-center mediciTable">
-        <thead>
-        <tr>
-            <th>Nr. crt.</th>
-            <th>Nume</th>
-            <th>Ocupație</th>
-            <th>Notă</th>
-            <th>Recenzie</th>
-            <th>Adaugă recenzie</th>
-        </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-</div>
-<br>
-<br>
-
-<!-- Footer -->
-<footer class="py-5 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Cei 4 fantastici 2017</p>
+        <h1 class="well text-center mb-5">Adăugare feedback</h1>
+        <div class="d-inline-flex">
+            <h6>Alegeți medicul:</h6>&nbsp
+            <a href="#" data-toggle="tooltip" title="Puteți căuta medicul despre care doriți să adăugați feedback-ul după nume, prenume sau ocupație."><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+        </div>
+        <div>
+            <form class="d-inline-flex searchMedic">
+                <label class="my-auto mr-1 col-md-1.5">Caută</label>
+                <input class="searchMedicInput ml-2 mr-4" type="text" name="search" value="">
+                <input class="btn" type="submit" value="Search">
+            </form>
+        </div><br>
+        <table class="table table-bordered text-center mediciTable">
+            <thead>
+            <tr>
+                <th>Nr. crt.</th>
+                <th>Nume</th>
+                <th>Ocupație</th>
+                <th>Notă</th>
+                <th>Recenzie</th>
+                <th>Adaugă recenzie</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
-</footer>
+    <br>
+    <br>
 
-<script src="js/jquery/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="js/loadMedici.js"></script>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Cei 4 fantastici 2017</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/loadMedici.js"></script>
 </body>

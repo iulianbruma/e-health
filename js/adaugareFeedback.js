@@ -1,3 +1,24 @@
+$(document).ready(function() {
+    var urlParams = new URLSearchParams(window.location.search);
+
+    $("#numeMedic").text("Nume: "+urlParams.get("nume")+".");
+
+    $("#adaugareFeedbackButton").click(function(){
+        $("div#divLoading").addClass('show');
+        setTimeout( function(){
+            $("div#divLoading").removeClass('show');
+
+            var numeProcedura = $("#adaugateFeedbackNumeProcedura").val();
+            if(numeProcedura.length>0){
+                $("#adaugareFeedbackModalSucces").modal();
+            }
+            else {
+                $("#adaugareFeedbackModalEroare").modal();
+            }
+        }, 1000);
+    });
+});
+
 var $star_rating = $('.star-rating .fa');
 
 var SetRatingStar = function() {
