@@ -1,4 +1,5 @@
 var pacientSelectat;
+var pacientUrl;
 
 $(document).ready(function() {
     $('.table').hide();
@@ -6,8 +7,20 @@ $(document).ready(function() {
     $('#noTratamenteMsg').hide();
 
     var urlParams = new URLSearchParams(window.location.search);
-    var pacient  = urlParams.get("pacient");
-    $('#cautaTratamenteDupaPacient').val(pacient);
+    var pacientUrl  = urlParams.get("pacient");
+    
+    if (pacientUrl != null) {
+        $('#cautaTratamenteDupaPacient').val(pacientUrl);
+        for (i = 0; i < pacienti.pacienti.length; i++) {
+            var pat = pacienti.pacienti[i];
+            var nume = pat.nume + " " + pat.prenume;
+            if (pacientUrl == nume) {
+                pacientSelectat = pat;
+                break;
+            }
+        }
+        $('#butonTratament').click();
+    }
 });
 
 function getDateTratament(tratId) {
@@ -48,7 +61,13 @@ $('#butonTratament').click(function() {
         $('.main').css("margin-bottom", "0");
         $('#noTratamenteMsg').hide();
         $('table').show();
-        $.getJSON('data/tratam.json', function(data) {
+        generareTabel();
+    }
+    
+});
+
+function generareTabel() {
+    $.getJSON('data/tratam.json', function(data) {
             var tratamenteFinal;
             $.each(data.tratamente, function(i, f) {
                 var trTratamente = '<tr>' + 
@@ -72,9 +91,7 @@ $('#butonTratament').click(function() {
                 $(tratamenteFinal).appendTo('.tabelTratamente tbody');
             }
         });
-    }
-    
-});
+};
 
 $( "#cautaTratamenteDupaPacient" ).keyup(function() {
     $('#vizTratamentPacient span').remove();
