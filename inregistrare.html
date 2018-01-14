@@ -14,10 +14,11 @@
 
     <link href="css/stylesheet.css" rel="stylesheet">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
 <body>
 
- <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><img style="height: 40px;" src="images/logo.png" /></a>
@@ -29,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarHealthToogle">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
                     <li class="nav-item">
-                      <a class="nav-link" href="inregistrare.html">Inregistrare pacient</a>
+                      <a class="nav-link active" href="inregistrare.html">Inregistrare pacient</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="introducere_reteta.html">Introducere reteta</a>
@@ -47,7 +48,7 @@
                       <a class="nav-link" href="contact.html">Adaugare conferinta</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#" id="logout">Logout</a>
+                      <a class="nav-link" href="index.html" id="logout">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -59,6 +60,7 @@
     <div class="container">
         <h1 class="well text-center mb-5">Înregistrare pacient</h1>
         <h6 class="text-danger" style="font-size: 12px;">* Câmpuri obligatorii</h6>
+		<label id="allError" class="text-danger" style="display: none;" ></label>
         <h3 class="well" >Informații personale </h3>
         <div class="col-lg-12 well">
             <div class="row">
@@ -67,39 +69,46 @@
                         <div class="row">
                             <div class="col">
                                 <label>Nume <span class="text-danger">*</span></label>
-                                <input type="text" placeholder="" class="form-control">	 
+                                <input id="numeInput" type="text" placeholder="" class="form-control">	 
+								<label id="numeError" class="text-danger" style="display: none;" ></label>
                             </div>
                             <div class="col">
                                 <label>CNP <span class="text-danger">*</span></label>
-                                <input type="text" placeholder="" class="form-control">
+                                <input id="cnpInput" type="text" placeholder="" class="form-control">
+								<label id="CNPError" class="text-danger" style="display: none;" ></label>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col">
                                 <label>Prenume <span class="text-danger">*</span></label>
-                                <input type="text" placeholder="" class="form-control">	 
+                                <input id="prenumeInput" type="text" placeholder="" class="form-control">	
+								<label id="prenumeError" class="text-danger" style="display: none;" ></label>								
                             </div>
                             <div class="col">
                                 <label>Număr telefon <span class="text-danger">*</span></label>
-                                <input type="text" placeholder="" class="form-control">
+                                <input id="telefonInput" type="text" placeholder="" class="form-control">
+								<label id="telefonError" class="text-danger" style="display: none;" ></label>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col">
                                 <label>E-mail <span class="text-danger">*</span></label>
-                                <input type="text" placeholder="" class="form-control">	 
+                                <input id="emailInput" type="text" placeholder="" class="form-control">	 
+								<label id="emailError" class="text-danger" style="display: none;" ></label>
                             </div>
                             <div class="col">
                                 <label>Data nașterii <span class="text-danger">*</span></label>
-                                <input type="date" placeholder="" class="form-control">
+                                <input id="dnInput" type="date" placeholder="" class="form-control">
+								<label id="dnError" class="text-danger" style="display: none;" ></label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
                                 <label>Adresa <span class="text-danger">*</span></label>
-                                <textarea placeholder="" rows="3" class="form-control"></textarea>
+                                <textarea id="adresaInput" placeholder="" rows="3" class="form-control"></textarea>
+								<label id="adresaError" class="text-danger" style="display: none;" ></label>
                             </div>	
                         </div>
                         
@@ -112,13 +121,14 @@
                         <div class="row">
                             <div class="col">
                                 <label >Grupa sanguină <span class="text-danger">*</span></label>
-                                <select class="form-control" name="size">
+                                <select class="form-control" id="grupaInput" name="size">
                                     <option value="">Alege grupa!</option>
                                     <option value="0">0l</option>
                                     <option value="a">All </option>
                                     <option value="b">Blll</option>
                                     <option value="ab">ABlV</option>
                                 </select> 
+								<label id="grupaError" class="text-danger" style="display: none;" ></label>
                             </div>
                             <div class="col">
                                 <label>Alergii</label>
@@ -153,6 +163,7 @@
                             </div>
                             <div class="col">
                                 <label>Alte informații</label>
+								<a href="#"  data-toggle="tooltip" title="Adăugați aici toate informațiile necesare pentru o fisă completă a pacientului."><i class="fa fa-question-circle" aria-hidden="true"></i></a>
                                 <textarea placeholder="" rows="2" class="form-control"></textarea>
                             </div>
                         </div>	
@@ -164,19 +175,25 @@
                     <div class="col-sm-12">
                         <div class="col-sm-6 form-group">
                             <label>Nume <span class="text-danger">*</span></label>
-                            <input type="text" placeholder="" class="form-control">
+                            <input id="numepInput" type="text" placeholder="" class="form-control">
+							<label id="numepError" class="text-danger" style="display: none;" ></label>
                         </div>
                         <div class="col-sm-6 form-group">
                             <label>Prenume <span class="text-danger">*</span></label>
-                            <input type="text" placeholder="" class="form-control">
+                            <input id="prenumepInput" type="text" placeholder="" class="form-control">
+							<label id="prenumepError" class="text-danger" style="display: none;" ></label>
                         </div>
                         <div class="col-sm-6 form-group">
                             <label>Număr telefon <span class="text-danger">*</span></label>
-                            <input type="text" placeholder="" class="form-control">
+                            <input id="telefonpInput" type="text" placeholder="" class="form-control">
+							<label id="telefonpError" class="text-danger" style="display: none;" ></label>
                         </div>
                     </div>
 
-                    <button type="button" class="btn btn-lg btn-success float-right">Înregistrare</button>					
+                    <button  id="inregistrare" type="button" class="btn btn-lg btn-success float-right"  data-toggle="modal" data-target="#inregistrareModal">Înregistrare</button>	
+					<button style="display: none;" id="inregistrareSucc" type="button" class="hidden"  data-toggle="modal" data-target="#inregistrareModalSucc">Înregistrare</button>					
+					<button style="display: none;"  id="inregistrareError" type="button" class="hidden"  data-toggle="modal" data-target="#inregistrareModalError">Înregistrare</button>					
+					<button style="display: none;"  id="inregistrareFinal" type="button" class="hidden" >Înregistrare</button>							
 
                 </form> 
             </div>
@@ -184,6 +201,46 @@
     </div>
 	<br>
 	<br>
+	
+	
+	 <!-- Modal -->
+    <div class="modal fade" id="inregistrareModalSucc" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Înregistrare pacient</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Pacientul a fost înregistrat cu succes.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="window.location.href='medic.html'" class="btn btn-default" data-dismiss="modal">Ok</button>
+					
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	
+	<div class="modal fade" id="inregistrareModalError" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Înregistrare pacient</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Pacientul este deja înregistrat în sistem.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="window.location.href='inregistrare.html'" class="btn btn-default" data-dismiss="modal">Ok</button>
+					
+                </div>
+            </div>
+        </div>
+    </div>
+	
 	
 	 <!-- Footer -->
     <footer class="py-5 bg-dark">
@@ -194,5 +251,9 @@
 
     <script src="js/jquery/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/javascript.js"></script>
+     <script src="js/javascript.js"></script>
+    <script src="js/inregistrar.js"></script>
+	 <script src="js/require.js"></script>
+	 
 	</body>
+</html>
