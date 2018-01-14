@@ -1,8 +1,16 @@
+var pacienti;
+
 function validateEmail(email) {
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
 }
 
+
+$(function() {
+     if (pacienti == null) {
+        pacienti = JSON.parse(localStorage.getItem('pacientiList'));    
+    }
+});
 		var letters=/^[a-zA-Z]*$/;
 		var pattern = /^([0-9]{10})$/;
 		var patternCNP = /^([0-9]{13})$/;
@@ -294,11 +302,22 @@ else{
 						document.getElementById("numepError").style.display = "none";
 						document.getElementById("prenumepError").style.display = "none";
 						document.getElementById("telefonpError").style.display = "none";
-						 $('#inregistrareSucc').click();
+                        
+                        var pacient = {};
+                        pacient.nume = nume;
+                        pacient.prenume = prenume;
+                        pacient.email = email;
+                        pacient.dataNasterii=dn;
+                        pacient.adresa=adresa;
+                        pacient.CNP=CNP;
+                        pacienti.push(pacient);
+                        localStorage.setItem("pacientiList", JSON.stringify(pacienti));
+						$('#inregistrareSucc').click();
 				}
 	
 }
 
 });
+
 
 
