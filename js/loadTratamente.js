@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    $('[data-toggle="tooltip"]').tooltip();
     $.getJSON('data/tratam.json', function(data) {
 		 var tratamente = [];
         $.each(data.tratamente, function(i, f) {
@@ -35,9 +35,9 @@ $(document).ready(function() {
 					tratamente.push("<td>" + f.diagnostic + "</td>");
 					tratamente.push('<td><button type="button" onclick="window.location.href=\'vizTrat2.html\'" class="btn btn-lg btn-success">Vizualizare</button></td>');
 					tratamente.push("<tr>");
-					$("<tbody/>", {html: tratamente.join("")}).appendTo('.tabelTratamente');
                }
            });
+           $("<tbody/>", {html: tratamente.join("")}).appendTo('.tabelTratamente');
        });
 
        return false;

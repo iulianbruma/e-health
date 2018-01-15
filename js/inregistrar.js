@@ -302,7 +302,7 @@ else{
 						document.getElementById("numepError").style.display = "none";
 						document.getElementById("prenumepError").style.display = "none";
 						document.getElementById("telefonpError").style.display = "none";
-                        
+                     $('#inregistrareSucc').click();
                         var pacient = {};
                         pacient.nume = nume;
                         pacient.prenume = prenume;
@@ -312,7 +312,7 @@ else{
                         pacient.CNP=CNP;
                         pacienti.push(pacient);
                         localStorage.setItem("pacientiList", JSON.stringify(pacienti));
-						$('#inregistrareSucc').click();
+
 				}
 	
 }
