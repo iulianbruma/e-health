@@ -70,14 +70,20 @@ $( "#loginId" ).click(function() {
 	var username = document.getElementById("username").value;
 	var pass = document.getElementById("password").value;
 	
-	if (username == "admin" && pass == "password") {
+    if (username == "" || pass == "") {
+        $('.loginErrorMsg').text('Toate câmpurile trebuie completate!');
+		$('.loginErrorMsg').show();
+    } else if (username == "achimas_cadariu" && pass == "medic") {
+        $('.loginErrorMsg').hide();
         localStorage.setItem("userLogat", JSON.stringify(medici.medici[0]));
 		window.location.href = "medic.html";
-	} else if (username == "pacient" && pass == "pacient") {
+	} else if (username == "pop_ion" && pass == "pacient") {
+        $('.loginErrorMsg').hide();
         localStorage.setItem("userLogat", JSON.stringify(pacienti.pacienti[4]));
 		window.location.href="pacient.html";
 	} else {
-		window.location.href="404.html";
+        $('.loginErrorMsg').text('Credențiale incorecte!');
+		$('.loginErrorMsg').show();
 	}
  });
  
@@ -113,6 +119,9 @@ function trimite() {
 }
 
 $(document).ready(function() {
+    $('.loginErrorMsg').hide();
+    $('#username').val("");
+    $('#password').val("");
     var urlParams = new URLSearchParams(window.location.search);
     $("#numePacient").text(urlParams.get("nume")+" "+urlParams.get("prenume"));
 });

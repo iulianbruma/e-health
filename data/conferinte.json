@@ -7,7 +7,7 @@
       "domeniu": "Cardiologie",
       "locatie": "Str. Observatorului 8/14, Cluj-Napoca",
       "data": "14.10.2017 10:00AM",
-      "nrPart": "50",
+      "nrPart": "50"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "domeniu": "Cardiologie",
       "locatie": "Centrul International de Conferinte, Sinaia",
       "data": "10.12.2017 8:00PM",
-      "nrPart": "50",
+      "nrPart": "50"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "domeniu": "Ortopedie",
       "locatie": "Palatul Parlamentului, București",
       "data": "10.03.2018 10:00AM",
-      "nrPart": "50",
+      "nrPart": "50"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "domeniu": "Pediatrie",
       "locatie": "Str. Mihai Eminescu 8/14, București",
       "data": "15.01.2018 10:00AM",
-      "nrPart": "50",
+      "nrPart": "50"
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "domeniu": "Neurologie",
       "locatie": "Spitalul Clinic de Recuperare, Iași",
       "data": "20.03.2018 10:00AM",
-      "nrPart": "50",
+      "nrPart": "50"
     }
   ]
 }
