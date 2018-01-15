@@ -2,6 +2,8 @@ var pacienti;
 var medici;
 var specialitati;
 var tratamente;
+var ok;
+var urlParams;
 
 function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -123,8 +125,10 @@ $(document).ready(function() {
     $('.loginErrorMsg').hide();
     $('#username').val("");
     $('#password').val("");
-    var urlParams = new URLSearchParams(window.location.search);
-    $("#numePacient").text(urlParams.get("nume")+" "+urlParams.get("prenume"));
+    $("#eroareData1").hide();
+    $("#eroareData2").hide();
+    ok = true;
+    urlParams = new URLSearchParams(window.location.search);    $("#numePacient").text(urlParams.get("nume")+" "+urlParams.get("prenume"));
 });
 
 $(".searchTratament").on("submit", function(){
@@ -144,3 +148,21 @@ $( "#rectificareTratament" ).click(function() {
     window.location.href="rectificare_tratament.html"+'?pacient='+document.getElementById("numePacient").innerHTML;
 });
 
+    $("#dataOk").click(function(){
+        var d1 = document.getElementById('data1').value;
+        var d2 = document.getElementById('data2').value;
+        ok = true;
+
+        if(d1==""){
+             $("#eroareData1").show();
+             ok=false;
+        }
+
+        if(d2==""){
+             $("#eroareData2").show();
+             ok=false;
+        }
+
+        if(ok)
+            window.location.href = "vizualizare_date3.html?nume="+urlParams.get("nume")+"&prenume="+urlParams.get("prenume");
+    });

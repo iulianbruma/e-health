@@ -51,4 +51,9 @@ function validareCampuri() {
         ok=false;
     }
 
+    if(data.value==""){
+        $("#eroareData").show();
+        ok=false;
+    }
+
 }
