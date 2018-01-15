@@ -119,6 +119,7 @@ function trimite() {
 }
 
 $(document).ready(function() {
+    $('.searchTratamentInput').val("");
     $('.loginErrorMsg').hide();
     $('#username').val("");
     $('#password').val("");

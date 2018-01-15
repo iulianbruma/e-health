@@ -1,26 +1,38 @@
 [
     {
         "id": 1,
-        "nume": "Chimioterapie"
+        "nume": "Cardiologie"
     },
     {
         "id": 2,
-        "nume": "Chirurgie"
+        "nume": "Chimioterapie"
     },
     {
         "id": 3,
-        "nume": "Ginecologie"
+        "nume": "Chirurgie"
     },
     {
         "id": 4,
-        "nume": "Oncologie"
+        "nume": "Ginecologie"
     },
     {
         "id": 5,
-        "nume": "Stomatologie"
+        "nume": "Nutriție"
     },
     {
         "id": 6,
+        "nume": "Oncologie"
+    },
+    {
+        "id": 7,
+        "nume": "Ortopedie"
+    },
+    {
+        "id": 8,
+        "nume": "Stomatologie"
+    },
+    {
+        "id": 9,
         "nume": "Urologie"
     }
 ]
