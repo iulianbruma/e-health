@@ -15,6 +15,8 @@ $('#salveazaProgramareFirst').click(function() {
 		
 	if (nume == "" && prenume == ""&& email == ""  && telefon == ""  && calendar == "" ) {
 
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "block";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "inline";
@@ -31,6 +33,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else 	if (nume == "" && prenume == ""&& email == ""  && telefon == ""  ) {
 
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "inline";
@@ -46,7 +50,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	
 	else	if (nume == "" && prenume == ""&& email == ""   && calendar == "" ) {
-
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "inline";
@@ -63,7 +68,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else	if (nume == "" && prenume == ""  && telefon == ""  && calendar == "" ) {
 
-
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "none";
@@ -79,7 +85,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	
 	else	if (nume == "" &&  email == ""  && telefon == ""  && calendar == "" ) {
-
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "inline";
@@ -94,7 +101,8 @@ $('#salveazaProgramareFirst').click(function() {
 	}
 	
 	else	if ( prenume == ""&& email == ""  && telefon == ""  && calendar == "" ) {
-
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "inline";
@@ -113,7 +121,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(nume == "" && prenume == ""&& email == ""  )
 	{
-	
+	   document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "inline";
@@ -129,6 +138,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(nume == "" && prenume == "" && telefon == "")
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "none";
@@ -144,6 +155,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(nume == "" && prenume == "" && calendar == "")
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "none";
@@ -160,6 +173,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(nume == "" && email == ""  && telefon == "" )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "inline";
@@ -175,6 +190,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(nume == "" && email == ""  && calendar == "" )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "inline";
@@ -190,7 +207,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 		else if(prenume == "" && email == ""  && telefon == "" )
 	{
-		
+		document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "inline";
@@ -207,6 +225,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 		else if(prenume == "" && email == ""  && calendar == "" )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "inline";
@@ -223,6 +243,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 			else if(nume == "" && telefon == ""  && calendar == "" )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "none";
@@ -238,6 +260,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 				else if(prenume == "" && telefon == ""  && calendar == "" )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "none";
@@ -253,6 +277,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 					else if(email == "" && telefon == ""  && calendar == "" )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "inline";
@@ -271,6 +297,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(nume == "" && prenume == ""  )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "none";
@@ -286,6 +314,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(nume == "" && email == ""  )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "inline";
@@ -301,6 +331,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(nume == "" && telefon == ""  )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "none";
@@ -316,6 +348,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(nume == "" && calendar == ""  )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "none";
@@ -329,9 +363,10 @@ $('#salveazaProgramareFirst').click(function() {
 		$('#calendarError').html('Alegeți o dată!');
 	}
 	
-	//////////////////////////////////////////////////////////////////////
 	else if(email == "" && prenume == ""  )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "inline";
@@ -347,6 +382,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(prenume == "" && telefon == ""  )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "none";
@@ -362,6 +399,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 		else if(prenume == "" && calendar == ""  )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "none";
@@ -377,6 +416,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(email == "" && telefon == ""  )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "inline";
@@ -392,6 +433,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(email == "" && calendar == ""  )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "inline";
@@ -407,6 +450,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(telefon == "" && calendar == ""  )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "none";
@@ -422,6 +467,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(nume == "" )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "inline";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "none";
@@ -437,7 +484,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(prenume == "" )
 	{
-		
+		document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "inline";
 		document.getElementById("emailError").style.display = "none";
@@ -453,6 +501,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(email == "" )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "inline";
@@ -468,6 +518,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(telefon == "" )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "none";
@@ -483,6 +535,8 @@ $('#salveazaProgramareFirst').click(function() {
 	
 	else if(calendar == "" )
 	{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		document.getElementById("numeError").style.display = "none";
 		document.getElementById("prenumeError").style.display = "none";
 		document.getElementById("emailError").style.display = "none";
@@ -499,6 +553,8 @@ $('#salveazaProgramareFirst').click(function() {
 
 
     else {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
 		var ok=true;
 		var oke=true;
 		var okn=true;

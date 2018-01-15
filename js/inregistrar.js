@@ -54,6 +54,8 @@ if (nume == "" && prenume == ""&& email == ""  && adresa == "" && CNP == "" && t
 	$('#numepError').html('Câmpul Nume trebuie completat!');
 	$('#prenumepError').html('Câmpul Prenume trebuie completat!');
 	$('#telefonpError').html('Câmpul Număr telefon trebuie completat!');
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 	}
 
 else if (nume == "" || prenume == "" || email == ""  || adresa == "" || CNP == "" || telefon == "" || dn == "" || numep == "" || prenumep == "" || telefonp == "" || grupa == "") {
@@ -70,15 +72,16 @@ else if (nume == "" || prenume == "" || email == ""  || adresa == "" || CNP == "
 	document.getElementById("numepError").style.display = "none";
 	document.getElementById("prenumepError").style.display = "none";
 	document.getElementById("telefonpError").style.display = "none";
-
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 
 	
 	
-else{
-
-			
+else {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 	  $.getJSON('data/pacienti.json', function(data) {
 			$.each(data.pacienti, function(i, f) {
                 if(f.CNP.includes(CNP)){
