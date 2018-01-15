@@ -47,7 +47,7 @@
                           <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="programareConsult.html">Programare consultatie</a>
+                          <a class="nav-link active" href="programareConsult.html">Programare consultatie</a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" data-toggle="modal" href="#myModal">Login</a>
@@ -64,17 +64,19 @@
             <div class="row">
                 <div class="col">
                     <label>Nume <span class="text-danger"> *</span></label>
-                    <input type="text" placeholder="" class="form-control">	 
-                </div>
+                    <input  id="numeInput" type="text" placeholder="" class="form-control">	 
+			         <label id="numeError" class="text-danger" style="display: none;" ></label>
+			  </div>
                 <div class="col">
                    <div class="ml-5 container">
                         <label>Calendar <span class="text-danger"> *</span></label>
-                        <div class="controls input-append date form_datetime" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-                            <input size="30" type="text" value="" readonly>
+                        <div  class="controls input-append date form_datetime" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                  <input id="calendarInput" size="30" type="text" value="" readonly>
                             <span class="add-on"><i class="icon-remove"></i></span>
                             <span class="add-on"><i class="icon-th"></i></span>
                         </div>
                         <input type="hidden" id="dtp_input1" value="" /><br/>
+                       <label id="calendarError" class="text-danger" style="display: none;" ></label>
                     </div>
                 </div>
 
@@ -83,22 +85,25 @@
 
             <div class="row">
                 <div class="col-sm-6">
-                 <label>Prenume <span class="text-danger">*</span></label>
-                    <input type="text" placeholder="" class="form-control">	 
+                <label>Prenume <span class="text-danger">*</span></label>
+           <input id="prenumeInput" type="text" placeholder="" class="form-control">
+			<label id="prenumeError" class="text-danger" style="display: none;" ></label>	 
                 </div>	
             </div>	
 
             <div class="row">
                 <div class="col-sm-6">
-                 <label>E-mail <span class="text-danger">*</span></label>
-                    <input type="text" placeholder="" class="form-control">	 
+                <label>E-mail <span class="text-danger">*</span></label>
+			<input id="emailInput" type="text" placeholder="" class="form-control">	 
+			<label id="emailError" class="text-danger" style="display: none;" ></label> 
                 </div>	
             </div>
 
             <div class="row">
                 <div class="col-sm-6">
-                 <label>Număr telefon <span class="text-danger">*</span></label>
-                    <input type="text" placeholder="" class="form-control">	 
+              <label>Număr telefon <span class="text-danger">*</span></label>
+			<input id="telefonInput" type="text" placeholder="" class="form-control">	
+			<label id="telefonError" class="text-danger" style="display: none;" ></label>	 
                 </div>	
             </div>
 
@@ -108,8 +113,38 @@
                     <textarea placeholder="" rows="3" class="form-control"></textarea>
                 </div>	
             </div>	
+        
+    <button type="button" id ="salveazaProgramareFirst" class="btn btn-lg btn-success mb-5 float-right ">Salvează</button>	
+            
+    <button type="button" onclick="window.location.href='programareConsult.html'" class="btn btn-lg btn-success mr-2 float-right">Înapoi</button>
+            
+	<button style="display: none;"  id="salveazaProgramare" type="button" class="hidden"  data-toggle="modal" data-target="#salveazaProgramareModal">Înregistrare</button>					
 
-            <button type="button" class="btn btn-lg btn-success  mb-5 float-right">Salvează</button>		
+
+ </div>
+
+			<br>
+	<div class="modal fade" id="salveazaProgramareModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                   <h4 class="modal-title">Programare consultație</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+                <div class="modal-body">
+                   <p>Consultația a fost programată cu succes!</p>
+                </div>
+                <div class="modal-footer">
+
+                   <button type="button" onclick="window.location.href='programareConsult.html'" class="btn btn-default" data-dismiss="modal">Ok</button>
+               </div>
+            </div>
+        </div>
+    </div>
+	
+
+
+	<br>
                 
             <!--Modal-->
             <div class="modal hide" id="myModal">
@@ -123,7 +158,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+      
 
         <br>
 
@@ -136,7 +171,7 @@
 
         <script src="js/jquery/jquery.min.js"></script>
         <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="js/javascript.js"></script>
+        <script src="js/programareConsultatie2.js"></script>
 
         <script type="text/javascript" src="js/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
         <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>

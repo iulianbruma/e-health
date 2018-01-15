@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Vizualizare date</title>
+    <title>Vizualizare conferințe</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
     <!-- Custom styles for this template -->
     <link href="css/stylesheet.css" rel="stylesheet">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -61,53 +61,67 @@
     <!-- Page Content -->
     <div class="container mb-2">
 
-        <h1 class="text-center mt-5 mb-5" >Vizualizare date monitorizate</h1>
+        <h1 class="text-center mt-5 mb-5" >Vizualizare conferințe</h1>
         <div class="d-inline-flex">
-            <h6>Alegeți pacientul:</h6>&nbsp
-            <a href="#" data-toggle="tooltip" title="Puteți căuta pacientul dorit introducând  numele sau prenumele acestuia."><i class="fa fa-question-circle" aria-hidden="true"></i></a>
-        </div>
-        <div class="mt-2 mb-4">
-            <form class="d-inline-flex searchPacient">
-                Căutare: <br><input class="searchPacientInput ml-2 mr-4" type="text" name="cautare" placeholder="Nume și prenume"><br>
-                <input class="btn" type="submit" value="Caută">
-            </form>
+            <h6>Alegeți conferința:</h6>&nbsp
+            <a href="#" data-toggle="tooltip" title="Puteți căuta conferința dorită introducând titlul acesteia."><i class="fa fa-question-circle" aria-hidden="true"></i></a>
         </div>
 
-        <table class="table table-bordered text-center pacientiTable mb-5">
-            <thead>
-                <tr>
-                    <th>Nr. crt.</th>
-                    <th>Nume</th>
-                    <th>Prenume</th>
-                    <th>Email</th>
-                    <th>Data nașterii</th>
-                    <th>Adresa</th>
-                    <th>Alege</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </div>
+        <div class="row">
+            <div class="col mt-2 mb-4">
+                <form class="d-inline-flex searchConferinta">
+                    Căutare: <br><input class="searchConferintaInput ml-2 mr-4" type="text" name="cautare" placeholder="Titlu"><br>
+                    <input class="btn" type="submit" value="Caută">
+                </form>
+            </div>
+            <div class="col float-right">
+           <button class="btn float-right" type="submit" onclick="window.location.href='adaugare_conferinta.html'">Adaugă conferință</button>
+           </div>
+       </div>
+
+       <table class="table table-bordered text-center conferinteTable mb-5">
+        <thead>
+            <tr>
+                <th>Nr. crt.</th>
+                <th>Titlu</th>
+                <th>Domeniu</th>
+                <th>Locație</th>
+                <th>Data și ora</th>
+                <th>Nr. maxim participanți</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Cei 4 fantastici 2017</p>
-    </div>
-    <!-- /.container -->
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col float-right">
+           <button class="btn float-right" type="submit" onclick="window.location.href='adaugare_conferinta.html'">Adaugă conferință</button>
+       </div>
+   </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Cei 4 fantastici 2017</p>
+</div>
+<!-- /.container -->
 </footer>
 
 <!-- Bootstrap core JavaScript -->
 <script src="js/jquery/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="js/javascript.js"></script>
-<script src="js/loadPacienti.js"></script>
+<script src="js/loadConferinte.js"></script>
 </body>
 
 </html>

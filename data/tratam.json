@@ -2,31 +2,67 @@
   "tratamente": [
 
     {
+      "id": 1,
       "nrCrt": "1",
-      "dataConsultatiei": "11.11.2017",
+      "dataConsultatiei": "12.11.2017",
       "medic": "Achimaș Cadariu Patriciu",
       "diagnostic": "Gripa",
 	  "medicament": "ACC"
     },
     {
+      "id": 2,
       "nrCrt": "2",
-      "dataConsultatiei": "12.11.2017",
+      "dataConsultatiei": "11.11.2017",
       "medic": "Bojan Anca",
       "diagnostic": "Viroza",
 	   "medicament": "Faringosept"
     },
     {
+      "id": 3,
       "nrCrt": "3",
       "dataConsultatiei": "10.11.2015",
       "medic": "Bojan Anca",
       "diagnostic": "Bronsita",
 	   "medicament": "Theraflu Sinus"
     },
-  {
+    {
+      "id": 4,
       "nrCrt": "4",
-      "dataConsultatiei": "10.11.2010",
+      "dataConsultatiei": "24.07.2014",
       "medic": "Burz Claudia",
-      "diagnostic": "Bronsita",
+      "diagnostic": "Raceala",
+	  "medicament": "Paracetamol"
+    },
+    {
+      "id": 5,
+      "nrCrt": "5",
+      "dataConsultatiei": "19.04.2014",
+      "medic": "Blag Dorel",
+      "diagnostic": "Pneumonie",
+	   "medicament": "Theraflu Sinus"
+    },
+    {
+      "id": 6,
+      "nrCrt": "6",
+      "dataConsultatiei": "22.01.2013",
+      "medic": "Căinap Călin Ion",
+      "diagnostic": "Tuse",
+	  "medicament": "Paracetamol"
+    },
+    {
+      "id": 7,
+      "nrCrt": "7",
+      "dataConsultatiei": "16.09.2012",
+      "medic": "Cernea Dana",
+      "diagnostic": "Ciroză",
+	   "medicament": "Theraflu Sinus"
+    },
+    {
+      "id": 8,
+      "nrCrt": "8",
+      "dataConsultatiei": "04.04.2012",
+      "medic": "Cernea Dana",
+      "diagnostic": "Tensiune",
 	  "medicament": "Paracetamol"
     }
   ]

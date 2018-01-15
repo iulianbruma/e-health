@@ -1,14 +1,14 @@
-
-//Modal - distribuie conferinta adaugata
-var shareModal = document.getElementById('shareModal');
-var btnDistribuie = document.getElementById("distribuie");
-var btnSalveaza = document.getElementById("salveaza");
-var btnDistribuie1 = document.getElementById("distribuie1");
-var spanClose = document.getElementsByClassName("close")[0];
-
 var pacienti;
 var medici;
 var specialitati;
+var tratamente;
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
 
 $.getJSON('data/medici.json', function(data) {
     medici = data;
@@ -19,7 +19,6 @@ $(function() {
     //localStorage.removeItem('intrebariList');
     
     var localS = localStorage.getItem("intrebariList");
-    console.log(localS);
     if (localS == null) {
         $.getJSON('data/intrebariPacienti.json', function(data) {
             localStorage.setItem("intrebariList", JSON.stringify(data));
@@ -27,8 +26,24 @@ $(function() {
     }
 });
 
+$(function() {
+    //folosim asta pentru a reseta medicamentele la cele din fisierul json
+    //localStorage.removeItem('medicamenteList');
+    
+    var localS = localStorage.getItem("medicamenteList");
+    if (localS == null) {
+        $.getJSON('data/medicam.json', function(data) {
+            localStorage.setItem("medicamenteList", JSON.stringify(data.medicamente));
+        });
+    }
+});
+
 $.getJSON('data/pacienti.json', function(data) {
     pacienti = data;
+});
+
+$.getJSON('data/tratam.json', function(data) {
+    tratamente = data;
 });
 
 $.getJSON('data/specialitati.json', function(data) {
@@ -99,14 +114,13 @@ function trimite() {
 
 $(document).ready(function() {
     var urlParams = new URLSearchParams(window.location.search);
-
     $("#numePacient").text(urlParams.get("nume")+" "+urlParams.get("prenume"));
 });
 
 $(".searchTratament").on("submit", function(){
     var searchTratamentInput = $(".searchTratamentInput").val();
 
-    if(searchTratamentInput=="1" || searchTratamentInput=="2"){
+    if(searchTratamentInput>="1" && searchTratamentInput<="8"){
         window.location.href = "vizTrat2.html";
     }
     else{
@@ -114,5 +128,9 @@ $(".searchTratament").on("submit", function(){
     }
 
     return false;
+});
+
+$( "#rectificareTratament" ).click(function() {
+    window.location.href="rectificare_tratament.html"+'?pacient='+document.getElementById("numePacient").innerHTML;
 });
 
