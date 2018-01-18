@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Programare Consultatie</title>
+
+	
+	
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/stylesheet.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+<body>
+
+    <!-- Navigation -->	
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success text-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="pacient.html"><img style="height: 40px;" src="images/logo.png" /></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHealthToogle" aria-controls="navbarHealthToogle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarHealthToogle">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-right">
+                    <li class="nav-item">
+                      <a class="nav-link" href="vizTrat.html">Vizualizare tratament</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="vizualizare_intrebare_pacient.html">Vizualizare întrebări</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="plasare_intrebare.html">Adăugare întrebare</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="adaugare_feedback.html">Adăugare feedback</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="vizualizare_conferinte.html">Vizualizare conferințe</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="emergency_call1.html">"Emergency Call"</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="programareConsult.html">Programare consultație</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="" id="logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</nav>
+	
+	<div class="container mb-5">
+        <h1 class="well text-center mb-5 mt-5">Programare consultație</h1>
+		
+		<div class="row mb-5 ml-5">
+            <div class="col-sm-4">
+                <label >Specialitate</label>
+                <select class="form-control specialitateM" name="size">
+                    <option value="all">Toate</option>
+                    <option value="Cardiologie">Cardiologie </option>
+                    <option value="Chimioterapie">Chimioterapie </option>
+                    <option value="Chirurgie">Chirurgie </option>
+                    <option value="Ginecologie">Ginecologie</option>
+                    <option value="Nutriție">Nutriție</option>
+                    <option value="Oncologie">Oncologie </option>
+                    <option value="Ortopedie">Ortopedie </option>
+                    <option value="Stomatologie">Stomatologie </option>
+                    <option value="Urologie">Urologie </option>
+                </select>   
+            </div>
+            <div class="col-sm-4">
+                <label >Oraș</label>
+                <select class="form-control orasM" name="size">
+                    <option value="allC">Toate</option>
+                    <option value="Cluj-Napoca">Cluj-Napoca</option>
+                    <option value="Oradea">Oradea</option>
+                    <option value="Sibiu">Sibiu</option>
+                </select>   
+			</div>
+			<div class="col-sm-4">
+                <button type="button"  class="btn btn-lg btn-success ml-5 mt-4 cautaMedici">Caută</button>
+			</div>
+        </div>
+		
+		
+		<table class="table table-bordered text-center tabelMedici">
+			<thead>
+				<tr>
+					<th>Nume doctor</th>
+					<th>Specialitate</th>
+					<th>Oraș</th>
+					<th>Opțiuni</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+			</tbody>
+		</table>
+	   
+        <!--Modal-->
+        <div class="modal hide" id="myModal">
+            <div>
+                <div class="loginmodal-container" style="margin-top: 10%;">
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                    <h1>Logare în sistem</h1><br>
+                    <input type="text" id="username" name="user" placeholder="Nume utilizator">
+                    <input type="password" id="password" name="pass" placeholder="Parola">
+                    <span class="text-danger loginErrorMsg"></span>
+                    <input type="submit" name="login" id="loginId" class="login loginmodal-submit" value="Logare">
+                </div>
+            </div>
+        </div>
+	</div>
+	
+	 <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Cei 4 fantastici 2017</p>
+      </div>
+    </footer>
+
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/loadMediciPentruProgramare.js"></script>
+	</body>

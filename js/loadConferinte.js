@@ -11,9 +11,9 @@ $(document).ready(function() {
                     "<td>" + f.data + "</td>" +
                     "<td>" + f.nrPart + "</td>"+
                      "</tr>";
-                $(tblRow).appendTo(".conferinteTable tbody");
+                
         });
-
+            $(tblRow).appendTo(".conferinteTable tbody");
     });
 
     $(".searchConferinta").on("submit", function(){
